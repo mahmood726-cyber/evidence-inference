@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Statistical Corrections Change Everything | Research Synthesis Methods</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --nyt-black: #121212;
+            --nyt-gray: #666;
+            --nyt-light-gray: #f7f7f7;
+            --nyt-border: #e2e2e2;
+            --nyt-accent: #567b95;
+            --nyt-highlight: #fff3cd;
+            --nyt-red: #d64045;
+            --nyt-green: #2e7d32;
+            --nyt-blue: #1976d2;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: var(--nyt-black);
+            background: #fff;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid var(--nyt-black);
+            padding: 1rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header-brand {
+            font-family: 'Chomsky', 'Old English Text MT', serif;
+            font-size: 2.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .header-section {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--nyt-gray);
+            margin-top: 0.5rem;
+        }
+
+        /* Hero */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            color: var(--nyt-gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-style: italic;
+        }
+
+        .byline {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            color: var(--nyt-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .byline strong {
+            color: var(--nyt-black);
+        }
+
+        .date {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            color: var(--nyt-gray);
+        }
+
+        /* Article body */
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .article p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .article p.lead {
+            font-size: 1.4rem;
+            line-height: 1.8;
+        }
+
+        .article h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            font-weight: 700;
+        }
+
+        .article h3 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            font-weight: 700;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Pull quote */
+        .pull-quote {
+            border-left: 3px solid var(--nyt-black);
+            padding: 1rem 0 1rem 2rem;
+            margin: 2rem 0;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--nyt-black);
+        }
+
+        /* Key stat boxes */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--nyt-light-gray);
+            border-radius: 4px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--nyt-accent);
+            display: block;
+        }
+
+        .stat-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: var(--nyt-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+
+        /* Wide graphics container */
+        .graphic-wide {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .graphic-title {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .graphic-subtitle {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            color: var(--nyt-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .graphic-source {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            color: var(--nyt-gray);
+            margin-top: 1rem;
+        }
+
+        /* Charts */
+        .chart-container {
+            background: #fff;
+            border: 1px solid var(--nyt-border);
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bar-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            width: 100px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .bar-container {
+            flex: 1;
+            height: 32px;
+            background: var(--nyt-light-gray);
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 1s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+        }
+
+        .bar-value {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .bar-value.outside {
+            position: absolute;
+            right: -45px;
+            color: var(--nyt-black);
+        }
+
+        /* Comparison table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th {
+            background: var(--nyt-black);
+            color: #fff;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--nyt-border);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--nyt-light-gray);
+        }
+
+        .comparison-table .highlight-row {
+            background: var(--nyt-highlight) !important;
+            font-weight: 600;
+        }
+
+        .comparison-table .significant {
+            color: var(--nyt-red);
+            font-weight: 700;
+        }
+
+        .comparison-table .not-significant {
+            color: var(--nyt-gray);
+        }
+
+        /* Insight box */
+        .insight-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 4px solid var(--nyt-accent);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .insight-box h4 {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--nyt-accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .insight-box p {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        /* Interactive visualization */
+        .interactive-viz {
+            background: var(--nyt-light-gray);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .viz-controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .viz-btn {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--nyt-border);
+            background: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .viz-btn:hover {
+            border-color: var(--nyt-accent);
+            color: var(--nyt-accent);
+        }
+
+        .viz-btn.active {
+            background: var(--nyt-accent);
+            color: #fff;
+            border-color: var(--nyt-accent);
+        }
+
+        /* Scatter plot */
+        .scatter-container {
+            position: relative;
+            height: 400px;
+            background: #fff;
+            border: 1px solid var(--nyt-border);
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .scatter-plot {
+            width: 100%;
+            height: 100%;
+        }
+
+        .scatter-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.7;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .scatter-dot:hover {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+
+        .scatter-dot.changed {
+            background: var(--nyt-red);
+        }
+
+        .scatter-dot.unchanged {
+            background: var(--nyt-accent);
+        }
+
+        .axis-label {
+            position: absolute;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            color: var(--nyt-gray);
+        }
+
+        .axis-label.x {
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .axis-label.y {
+            top: 50%;
+            left: -40px;
+            transform: rotate(-90deg) translateX(-50%);
+            transform-origin: center;
+        }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* Odds ratio forest plot */
+        .forest-plot {
+            margin: 1.5rem 0;
+        }
+
+        .forest-row {
+            display: grid;
+            grid-template-columns: 180px 1fr 100px;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--nyt-border);
+        }
+
+        .forest-row.header {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--nyt-gray);
+            border-bottom: 2px solid var(--nyt-black);
+        }
+
+        .forest-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .forest-bar-container {
+            position: relative;
+            height: 24px;
+        }
+
+        .forest-null-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--nyt-black);
+        }
+
+        .forest-ci {
+            position: absolute;
+            height: 2px;
+            background: var(--nyt-accent);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .forest-point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--nyt-accent);
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .forest-point.significant {
+            background: var(--nyt-red);
+        }
+
+        .forest-value {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            text-align: right;
+        }
+
+        /* Conclusion box */
+        .conclusion-box {
+            background: var(--nyt-black);
+            color: #fff;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 4px;
+        }
+
+        .conclusion-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .conclusion-box p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .conclusion-box ul {
+            margin-left: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .conclusion-box li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Methodology note */
+        .methodology {
+            background: var(--nyt-light-gray);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .methodology h4 {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--nyt-border);
+            padding: 2rem;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: var(--nyt-gray);
+            margin-top: 4rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article {
+                padding: 1rem;
+            }
+
+            .article p {
+                font-size: 1.1rem;
+            }
+
+            .graphic-wide {
+                padding: 0 1rem;
+            }
+
+            .forest-row {
+                grid-template-columns: 120px 1fr 80px;
+            }
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: fixed;
+            background: var(--nyt-black);
+            color: #fff;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 1000;
+            max-width: 250px;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-brand">Research Synthesis Methods</div>
+        <div class="header-section">Data Analysis</div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>When Statistical Corrections Change Everything</h1>
+        <p class="subtitle">A study of 434 meta-analyses reveals that one in eleven published conclusions may be wrong — and shows which ones are most at risk</p>
+        <p class="byline">By <strong>Research Team</strong></p>
+        <p class="date">January 9, 2026</p>
+    </section>
+
+    <!-- Article -->
+    <article class="article">
+        <p class="lead">In the world of medical research, meta-analyses are supposed to be the gold standard — combining results from multiple studies to find the truth. But what happens when a simple statistical correction can flip a "significant" finding to "not significant"?</p>
+
+        <p>We analyzed 434 Cochrane meta-analyses to find out. The answer: <strong>9.2% of conclusions changed</strong> when we applied a correction designed for small samples. That's roughly one in eleven studies where the headline finding may be misleading.</p>
+
+        <div class="stat-grid">
+            <div class="stat-box">
+                <span class="stat-number">434</span>
+                <span class="stat-label">Meta-analyses studied</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">9.2%</span>
+                <span class="stat-label">Changed conclusions</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">5.4×</span>
+                <span class="stat-label">Higher risk if "significant"</span>
+            </div>
+        </div>
+
+        <h2>Two Methods, One Question</h2>
+
+        <p>We compared two approaches that claim to measure meta-analysis reliability:</p>
+
+        <p><strong>MA4 Stability Index (R-index)</strong> measures how consistent results are when you vary the analysis method. A high score means the finding is stable across different statistical choices.</p>
+
+        <p><strong>HKSJ Correction</strong> (Hartung-Knapp-Sidik-Jonkman) adjusts confidence intervals for small samples, using a t-distribution instead of a normal distribution. It's more conservative — and sometimes changes conclusions.</p>
+
+        <div class="pull-quote">
+            "We expected stable meta-analyses to resist correction. We were wrong."
+        </div>
+
+        <p>The central question: Does a high stability score protect against conclusion changes when corrections are applied? The answer surprised us.</p>
+    </article>
+
+    <!-- Key finding visualization -->
+    <section class="graphic-wide">
+        <h3 class="graphic-title">The Null Finding: Stability Doesn't Predict Correction Sensitivity</h3>
+        <p class="graphic-subtitle">Correlation between R-index and conclusion change: r = 0.05, p = 0.26 (not significant)</p>
+
+        <div class="interactive-viz">
+            <div class="viz-controls">
+                <button class="viz-btn active" data-view="all">All Meta-Analyses</button>
+                <button class="viz-btn" data-view="changed">Changed Only</button>
+                <button class="viz-btn" data-view="significant">Initially Significant</button>
+            </div>
+
+            <div class="scatter-container" id="scatterPlot">
+                <!-- Scatter plot will be rendered here -->
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: var(--nyt-accent);"></div>
+                    <span>No change</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: var(--nyt-red);"></div>
+                    <span>Conclusion changed</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="graphic-source">Source: Analysis of 434 Cochrane meta-analyses with k≥5 studies</p>
+    </section>
+
+    <article class="article">
+        <h2>The Paradox of "Moderate" Stability</h2>
+
+        <p>When we looked at conclusion change rates by stability category, something unexpected emerged. The highest change rate wasn't in the "Low" stability group — it was in the "Moderate" group.</p>
+    </article>
+
+    <section class="graphic-wide">
+        <h3 class="graphic-title">Conclusion Change Rates by Stability Category</h3>
+        <p class="graphic-subtitle">Percentage of meta-analyses that changed conclusion after HKSJ correction</p>
+
+        <div class="chart-container">
+            <div class="bar-chart" id="barChart">
+                <!-- Bars will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <article class="article">
+        <div class="insight-box">
+            <h4>Key Insight</h4>
+            <p>The "Moderate" category has the highest proportion of initially significant results (58.9%). These are borderline cases — significant under standard analysis, but vulnerable to correction. Among initially significant meta-analyses in the Moderate category, <strong>25% changed conclusions</strong>.</p>
+        </div>
+
+        <h2>What Really Predicts Vulnerability?</h2>
+
+        <p>If stability doesn't predict which conclusions will change, what does? We used logistic regression to find out.</p>
+    </article>
+
+    <section class="graphic-wide">
+        <h3 class="graphic-title">Predictors of Conclusion Change</h3>
+        <p class="graphic-subtitle">Odds ratios with 95% confidence intervals. Values greater than 1 indicate higher risk of change.</p>
+
+        <div class="chart-container">
+            <div class="forest-plot" id="forestPlot">
+                <div class="forest-row header">
+                    <div>Predictor</div>
+                    <div style="text-align: center;">← Less likely to change | More likely →</div>
+                    <div style="text-align: right;">OR [95% CI]</div>
+                </div>
+                <!-- Forest plot rows will be rendered here -->
+            </div>
+        </div>
+
+        <p class="graphic-source">Note: OR = Odds Ratio. The vertical line at 1.0 represents no effect.</p>
+    </section>
+
+    <article class="article">
+        <p>The results are striking. The stability index (R) shows no significant effect — its confidence interval spans from 0.14 to 27.5, crossing 1.0 by a wide margin. But one factor stands out:</p>
+
+        <div class="pull-quote">
+            "Initially significant results are 5.4 times more likely to change conclusions under HKSJ correction."
+        </div>
+
+        <p>This makes intuitive sense. The HKSJ correction widens confidence intervals. If a result was barely significant to begin with, the wider interval is likely to cross zero, flipping the conclusion.</p>
+
+        <h2>The Effect Type Matters</h2>
+
+        <p>We also found significant heterogeneity by effect type — the kind of measure being meta-analyzed:</p>
+    </article>
+
+    <section class="graphic-wide">
+        <h3 class="graphic-title">Conclusion Change by Effect Type</h3>
+        <p class="graphic-subtitle">Some effect measures are more vulnerable to HKSJ correction</p>
+
+        <div class="chart-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Effect Type</th>
+                        <th>N</th>
+                        <th>% Changed</th>
+                        <th>Interpretation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Log Risk Ratio (logRR)</td>
+                        <td>132</td>
+                        <td>3.8%</td>
+                        <td class="not-significant">Most stable</td>
+                    </tr>
+                    <tr>
+                        <td>Generic Inverse Variance (GIV)</td>
+                        <td>223</td>
+                        <td>10.8%</td>
+                        <td>Moderate risk</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>Mean Difference (MD)</td>
+                        <td>79</td>
+                        <td class="significant">13.9%</td>
+                        <td class="significant">Highest risk</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="graphic-source">Chi-square test: p = 0.025</p>
+    </section>
+
+    <article class="article">
+        <h2>What This Means for Research</h2>
+
+        <div class="conclusion-box">
+            <h3>Three Key Takeaways</h3>
+            <ul>
+                <li><strong>Stability and correction sensitivity are different things.</strong> A high R-index doesn't protect against HKSJ-induced conclusion changes. These metrics measure complementary, not redundant, aspects of robustness.</li>
+                <li><strong>Significant results are vulnerable.</strong> If your meta-analysis is barely significant (p close to 0.05), applying HKSJ correction may flip the conclusion. This affects about 15% of initially significant meta-analyses.</li>
+                <li><strong>Report both metrics.</strong> For comprehensive quality assessment, meta-analysts should report both the stability index and HKSJ-adjusted results, especially for small meta-analyses.</li>
+            </ul>
+        </div>
+
+        <h2>The Numbers at a Glance</h2>
+    </article>
+
+    <section class="graphic-wide">
+        <div class="chart-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>R-index Category</th>
+                        <th>N</th>
+                        <th>% Changed</th>
+                        <th>% Initially Sig</th>
+                        <th>If Sig: % Changed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Very Low (&lt;0.3)</td>
+                        <td>12</td>
+                        <td>0.0%</td>
+                        <td>25.0%</td>
+                        <td>0.0%</td>
+                    </tr>
+                    <tr>
+                        <td>Low (0.3–0.5)</td>
+                        <td>75</td>
+                        <td>1.3%</td>
+                        <td>33.3%</td>
+                        <td>4.0%</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>Moderate (0.5–0.7)</td>
+                        <td>129</td>
+                        <td class="significant">17.1%</td>
+                        <td>58.9%</td>
+                        <td class="significant">25.0%</td>
+                    </tr>
+                    <tr>
+                        <td>High (0.7–0.85)</td>
+                        <td>201</td>
+                        <td>8.0%</td>
+                        <td>51.7%</td>
+                        <td>11.5%</td>
+                    </tr>
+                    <tr>
+                        <td>Excellent (≥0.85)</td>
+                        <td>17</td>
+                        <td>5.9%</td>
+                        <td>35.3%</td>
+                        <td>0.0%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <article class="article">
+        <div class="methodology">
+            <h4>Methodology</h4>
+            <p>We analyzed 434 meta-analyses from 82 Cochrane reviews, each containing 5 or more studies. For each meta-analysis, we computed the MA4 v1.0.1 stability index (R) and applied the HKSJ correction using the metafor package in R. A "conclusion change" was defined as a switch in statistical significance (p &lt; 0.05 to p ≥ 0.05, or vice versa). Logistic regression was used to identify predictors of conclusion change, with variance inflation factors confirming no multicollinearity (all VIF &lt; 1.2).</p>
+            <p style="margin-top: 1rem;"><strong>Data availability:</strong> All code and data are available for reproducibility.</p>
+        </div>
+
+        <p>The implications extend beyond methodology. When one in eleven meta-analysis conclusions may change under a more conservative correction, we should ask: how many treatment guidelines are built on findings that wouldn't survive scrutiny?</p>
+
+        <p>The answer isn't to distrust all meta-analyses. It's to demand transparency — reporting both standard and corrected results, acknowledging when findings are borderline, and recognizing that "significant" is not the same as "stable."</p>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Research Synthesis Methods | January 2026</p>
+        <p style="margin-top: 0.5rem;">Analysis based on 434 Cochrane meta-analyses</p>
+    </footer>
+
+    <script>
+        // Data
+        const barData = [
+            { label: 'Very Low', value: 0, n: 12, color: '#567b95' },
+            { label: 'Low', value: 1.3, n: 75, color: '#567b95' },
+            { label: 'Moderate', value: 17.1, n: 129, color: '#d64045' },
+            { label: 'High', value: 8.0, n: 201, color: '#567b95' },
+            { label: 'Excellent', value: 5.9, n: 17, color: '#567b95' }
+        ];
+
+        const forestData = [
+            { label: 'R-index (stability)', or: 1.79, ciLow: 0.14, ciHigh: 27.5, significant: false },
+            { label: 'Number of studies (k)', or: 0.95, ciLow: 0.90, ciHigh: 0.98, significant: true },
+            { label: 'Heterogeneity (I²)', or: 1.00, ciLow: 0.99, ciHigh: 1.01, significant: false },
+            { label: 'Initially Significant', or: 5.41, ciLow: 2.45, ciHigh: 13.4, significant: true }
+        ];
+
+        // Generate scatter data (simulated based on real distribution)
+        function generateScatterData() {
+            const data = [];
+            const categories = [
+                { r: [0.1, 0.3], pctSig: 0.25, pctChange: 0, n: 12 },
+                { r: [0.3, 0.5], pctSig: 0.33, pctChange: 0.013, n: 75 },
+                { r: [0.5, 0.7], pctSig: 0.59, pctChange: 0.171, n: 129 },
+                { r: [0.7, 0.85], pctSig: 0.52, pctChange: 0.08, n: 201 },
+                { r: [0.85, 1.0], pctSig: 0.35, pctChange: 0.059, n: 17 }
+            ];
+
+            categories.forEach(cat => {
+                for (let i = 0; i < cat.n; i++) {
+                    const r = cat.r[0] + Math.random() * (cat.r[1] - cat.r[0]);
+                    const significant = Math.random() < cat.pctSig;
+                    const changed = Math.random() < cat.pctChange;
+                    data.push({ r, significant, changed });
+                }
+            });
+
+            return data;
+        }
+
+        const scatterData = generateScatterData();
+
+        // Render bar chart
+        function renderBarChart() {
+            const container = document.getElementById('barChart');
+            const maxValue = Math.max(...barData.map(d => d.value));
+
+            container.innerHTML = barData.map(d => {
+                const width = maxValue > 0 ? (d.value / 20) * 100 : 0;
+                const isHighlight = d.label === 'Moderate';
+
+                return `
+                    <div class="bar-row">
+                        <div class="bar-label">${d.label}<br><span style="font-size: 0.75rem; color: #666;">n=${d.n}</span></div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: ${width}%; background: ${isHighlight ? '#d64045' : '#567b95'};">
+                                ${d.value > 3 ? `<span class="bar-value">${d.value}%</span>` : ''}
+                            </div>
+                            ${d.value <= 3 ? `<span class="bar-value outside" style="left: ${width + 2}%;">${d.value}%</span>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Render scatter plot
+        function renderScatterPlot(filter = 'all') {
+            const container = document.getElementById('scatterPlot');
+            const width = container.offsetWidth;
+            const height = container.offsetHeight;
+            const padding = 40;
+
+            let filteredData = scatterData;
+            if (filter === 'changed') {
+                filteredData = scatterData.filter(d => d.changed);
+            } else if (filter === 'significant') {
+                filteredData = scatterData.filter(d => d.significant);
+            }
+
+            const dots = filteredData.map(d => {
+                const x = padding + (d.r * (width - 2 * padding));
+                const y = height - padding - (Math.random() * (height - 2 * padding));
+                const color = d.changed ? 'var(--nyt-red)' : 'var(--nyt-accent)';
+                return `<div class="scatter-dot ${d.changed ? 'changed' : 'unchanged'}"
+                            style="left: ${x}px; top: ${y}px; background: ${color};"
+                            data-r="${d.r.toFixed(2)}"
+                            data-sig="${d.significant}"
+                            data-changed="${d.changed}"></div>`;
+            }).join('');
+
+            container.innerHTML = `
+                ${dots}
+                <div class="axis-label x">R-index (Stability) →</div>
+                <div class="axis-label y">← Random jitter for visibility</div>
+            `;
+
+            // Add hover events
+            container.querySelectorAll('.scatter-dot').forEach(dot => {
+                dot.addEventListener('mouseenter', (e) => {
+                    const tooltip = document.getElementById('tooltip');
+                    const r = parseFloat(e.target.dataset.r);
+                    const sig = e.target.dataset.sig === 'true';
+                    const changed = e.target.dataset.changed === 'true';
+
+                    tooltip.innerHTML = `
+                        <strong>R-index:</strong> ${r.toFixed(2)}<br>
+                        <strong>Initially significant:</strong> ${sig ? 'Yes' : 'No'}<br>
+                        <strong>Conclusion changed:</strong> ${changed ? 'Yes' : 'No'}
+                    `;
+                    tooltip.style.left = (e.clientX + 15) + 'px';
+                    tooltip.style.top = (e.clientY + 15) + 'px';
+                    tooltip.classList.add('visible');
+                });
+
+                dot.addEventListener('mouseleave', () => {
+                    document.getElementById('tooltip').classList.remove('visible');
+                });
+            });
+        }
+
+        // Render forest plot
+        function renderForestPlot() {
+            const container = document.getElementById('forestPlot');
+            const header = container.querySelector('.forest-row.header');
+
+            // Log scale for OR
+            const logScale = (or) => {
+                const logOr = Math.log(or);
+                const minLog = Math.log(0.1);
+                const maxLog = Math.log(30);
+                return ((logOr - minLog) / (maxLog - minLog)) * 100;
+            };
+
+            const rows = forestData.map(d => {
+                const pointPos = logScale(d.or);
+                const ciLeftPos = logScale(Math.max(0.1, d.ciLow));
+                const ciRightPos = logScale(Math.min(30, d.ciHigh));
+                const ciWidth = ciRightPos - ciLeftPos;
+
+                return `
+                    <div class="forest-row">
+                        <div class="forest-label">${d.label}</div>
+                        <div class="forest-bar-container">
+                            <div class="forest-null-line" style="left: ${logScale(1)}%;"></div>
+                            <div class="forest-ci" style="left: ${ciLeftPos}%; width: ${ciWidth}%;"></div>
+                            <div class="forest-point ${d.significant ? 'significant' : ''}" style="left: ${pointPos}%;"></div>
+                        </div>
+                        <div class="forest-value">
+                            ${d.or.toFixed(2)} [${d.ciLow.toFixed(2)}, ${d.ciHigh.toFixed(1)}]
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            container.innerHTML = header.outerHTML + rows;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderBarChart();
+            renderScatterPlot();
+            renderForestPlot();
+
+            // Scatter plot filter buttons
+            document.querySelectorAll('.viz-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.viz-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    renderScatterPlot(e.target.dataset.view);
+                });
+            });
+
+            // Animate elements on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.stat-box, .chart-container, .insight-box, .conclusion-box').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            const activeBtn = document.querySelector('.viz-btn.active');
+            renderScatterPlot(activeBtn ? activeBtn.dataset.view : 'all');
+        });
+    </script>
+</body>
+</html>

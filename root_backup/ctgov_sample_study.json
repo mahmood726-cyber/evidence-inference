@@ -1,0 +1,966 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT03192891",
+      "orgStudyIdInfo": {
+        "id": "SCMR_GRANT_002"
+      },
+      "organization": {
+        "fullName": "Society for Cardiovascular Magnetic Resonance",
+        "class": "OTHER"
+      },
+      "briefTitle": "Stress CMR Perfusion Imaging in the United States (SPINS) Study",
+      "officialTitle": "Stress CMR Perfusion Imaging in the United States (SPINS) Study. A Society for Cardiovascular Magnetic Resonance (SCMR) Registry Study",
+      "acronym": "SPINS"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2025-01",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2016-12-01",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2019-11-30",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2019-11-30",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2017-06-16",
+      "studyFirstSubmitQcDate": "2017-06-16",
+      "studyFirstPostDateStruct": {
+        "date": "2017-06-20",
+        "type": "ACTUAL"
+      },
+      "resultsFirstSubmitDate": "2022-07-04",
+      "resultsFirstSubmitQcDate": "2025-01-06",
+      "resultsFirstPostDateStruct": {
+        "date": "2025-01-31",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2025-12-08",
+      "lastUpdatePostDateStruct": {
+        "date": "2025-12-30",
+        "type": "ESTIMATED"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "PRINCIPAL_INVESTIGATOR",
+        "investigatorFullName": "Raymond Y. Kwong, MD",
+        "investigatorTitle": "Principal Investigator, SPINS Study",
+        "investigatorAffiliation": "Society for Cardiovascular Magnetic Resonance"
+      },
+      "leadSponsor": {
+        "name": "Society for Cardiovascular Magnetic Resonance",
+        "class": "OTHER"
+      },
+      "collaborators": [
+        {
+          "name": "Siemens Medical Solutions",
+          "class": "INDUSTRY"
+        },
+        {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        }
+      ]
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+    },
+    "descriptionModule": {
+      "briefSummary": "Numerous single-center studies have indicated gadolinium-enhanced stress CMR perfusion imaging has excellent diagnostic accuracy for coronary artery disease and negative clinical event rates, with its diagnostic accuracy exceeding nuclear scintigraphy. However, current prognostic evidence supporting clinical use of stress CMR is limited by study size, single-center settings with a predominance of academic centers, and a lack of \"real-world\" study design. Large-scale multicenter real-world evidence from a registry will provide the much needed information to guide evidence-based clinical adaptation that benefits patient care.",
+      "detailedDescription": "Randomized multicenter studies have demonstrated the high accuracy of vasodilator stress cardiac magnetic resonance imaging (CMR) in detecting coronary stenoses and in estimating impaired flow reserve in coronary artery disease (CAD). Stress CMR has also been shown in many studies to be an effective cardiac prognosticating method for patients presenting with chest pain syndromes. The American College of Cardiology Foundation and American Heart Association have recommended stress CMR as an appropriate test for evaluation of symptomatic patients with intermediate to high pre-test probability for CAD. However, stress CMR remains an underutilized method in the United States. SPINS (Stress CMR Perfusion Imaging in the United States: A Society for Cardiovascular Resonance Registry Study) is a multicenter observational study of patients with stable chest pain syndromes designed to evaluate the long-term performance of stress CMR for cardiovascular prognosis and to investigate the cost of additional downstream cardiac testing following the index stress CMR."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Myocardial Ischemia"
+      ]
+    },
+    "designModule": {
+      "studyType": "OBSERVATIONAL",
+      "patientRegistry": false,
+      "designInfo": {
+        "observationalModel": "CASE_ONLY",
+        "timePerspective": "RETROSPECTIVE"
+      },
+      "enrollmentInfo": {
+        "count": 2349,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "interventions": [
+        {
+          "type": "DIAGNOSTIC_TEST",
+          "name": "Stress cardiac magnetic resonance (CMR) perfusion imaging",
+          "description": "Gadolinium-enhanced stress CMR perfusion imaging is a tool increasingly used for the risk assessment and diagnosis of coronary artery disease."
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Cardiovascular Mortality",
+          "description": "Patient mortality due to cardiac or vascular events",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019)."
+        },
+        {
+          "measure": "Acute Myocardial Infarction",
+          "description": "Acute myocardial infarction events that occurred after the index stress cardiac magnetic resonance imaging study, during the follow-up period",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019)."
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Cardiac Hospitalizations",
+          "description": "Cardiac hospitalizations for unstable angina or worsened or new heart failure",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019)."
+        },
+        {
+          "measure": "Late Coronary Arterial Bypass Surgery",
+          "description": "Coronary arterial bypass surgery beyond 6 months after cardiac magnetic resonance imaging",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019)."
+        },
+        {
+          "measure": "Incremental Cost-Effectiveness Ratio in Dollar/Quality-Adjusted Life Year",
+          "description": "Healthcare costs spent for downstream cardiovascular testing after the cardiac magnetic resonance imaging study. The trade-offs between quality-adjusted life years and costs are evaluated using incremental cost-effectiveness analysis methods.",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019)."
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\nall of the following at time of imaging: a) male or female at age 35-85 years, b) presence of either of the following sign/symptom that led to stress CMR imaging\n\n1. Symptoms suspicious of ischemia, or\n2. abnormal ECG with a suspicion of coronary artery disease c) Intermediate or high risk of significant coronary disease based on at least 2 of the following conditions:\n\n   1. patient age \\> 50 for male, 60 for female\n   2. Diabetes: by either history or medical treatment\n   3. Hypertension: by either history or medical treatment\n   4. Hypercholesterolemia: by either history or medical treatment\n   5. family history of premature coronary disease: first degree relative at age \\<= 55 male and \\<=65 female\n   6. Body mass index \\> 30\n   7. Any medical documentation of peripheral artery disease\n   8. Any history of myocardial infarction or percutaneous coronary intervention\n\nExclusion Criteria:\n\n1. Prior history of coronary artery bypass surgery (CABG)\n2. Acute myocardial infarction within the past 30 days prior to CMR\n3. any significant non-coronary cardiac conditions confirmed by medical documentation a. severe valvular heart disease, b. non-ischemic cardiomyopathy with left ventricular ejection fraction \\<40%, c. infiltrative cardiomyopathy, d. hypertrophic cardiomyopathy, e. pericardial disease with significant constriction, or\n4. active pregnancy,\n5. any competing conditions leading to an expected survival of \\< 2 years\n6. Known inability to follow-up due to logistical reasons (e.g. patient lives in another country where follow-up is not feasible)",
+      "sex": "ALL",
+      "minimumAge": "35 Years",
+      "maximumAge": "85 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ],
+      "studyPopulation": "Consecutive patients who underwent stress CMR perfusion imaging for evaluation of myocardial ischemia between 2008-2013.",
+      "samplingMethod": "NON_PROBABILITY_SAMPLE"
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Raymond Y Kwong, MD, MPH",
+          "affiliation": "Brigham and Women's Hospital",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Scripps Clinic",
+          "city": "La Jolla",
+          "state": "California",
+          "zip": "92037",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 32.84727,
+            "lon": -117.2742
+          }
+        },
+        {
+          "facility": "University of Illinois",
+          "city": "Chicago",
+          "state": "Illinois",
+          "zip": "60612",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.85003,
+            "lon": -87.65005
+          }
+        },
+        {
+          "facility": "University of Chicago",
+          "city": "Chicago",
+          "state": "Illinois",
+          "zip": "60637",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.85003,
+            "lon": -87.65005
+          }
+        },
+        {
+          "facility": "University of Kentucky",
+          "city": "Lexington",
+          "state": "Kentucky",
+          "zip": "40536",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 37.98869,
+            "lon": -84.47772
+          }
+        },
+        {
+          "facility": "National Heart, Lung, and Blood Institute (NHLBI)",
+          "city": "Bethesda",
+          "state": "Maryland",
+          "zip": "20824",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 38.98067,
+            "lon": -77.10026
+          }
+        },
+        {
+          "facility": "Brigham and Women's Hospital",
+          "city": "Boston",
+          "state": "Massachusetts",
+          "zip": "02115",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.35843,
+            "lon": -71.05977
+          }
+        },
+        {
+          "facility": "University of Minnesota",
+          "city": "Minneapolis",
+          "state": "Minnesota",
+          "zip": "55455",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 44.97997,
+            "lon": -93.26384
+          }
+        },
+        {
+          "facility": "New York-Presbyterian Brooklyn Methodist Hospital",
+          "city": "Brooklyn",
+          "state": "New York",
+          "zip": "11215",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.6501,
+            "lon": -73.94958
+          }
+        },
+        {
+          "facility": "Ohio State University",
+          "city": "Columbus",
+          "state": "Ohio",
+          "zip": "43210",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.96118,
+            "lon": -82.99879
+          }
+        },
+        {
+          "facility": "Sharon Regional Health System",
+          "city": "Hermitage",
+          "state": "Pennsylvania",
+          "zip": "16148",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.23339,
+            "lon": -80.44868
+          }
+        },
+        {
+          "facility": "Houston Methodist",
+          "city": "Houston",
+          "state": "Texas",
+          "zip": "77030",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 29.76328,
+            "lon": -95.36327
+          }
+        },
+        {
+          "facility": "San Antonio Military Medical Center - Wilford Hall",
+          "city": "San Antonio",
+          "state": "Texas",
+          "zip": "78219",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 29.42412,
+            "lon": -98.49363
+          }
+        },
+        {
+          "facility": "Revere Health",
+          "city": "Provo",
+          "state": "Utah",
+          "zip": "84604",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.23384,
+            "lon": -111.65853
+          }
+        }
+      ]
+    },
+    "referencesModule": {
+      "references": [
+        {
+          "pmid": "33166994",
+          "type": "BACKGROUND",
+          "citation": "Ge Y, Steel K, Antiochos P, Bingham S, Abdullah S, Mikolich JR, Arai AE, Bandettini WP, Shanbhag SM, Patel AR, Farzaneh-Far A, Heitner JF, Shenoy C, Leung SW, Gonzalez JA, Shah DJ, Raman SV, Nawaz H, Ferrari VA, Schulz-Menger J, Stuber M, Simonetti OP, Kwong RY. Stress CMR in patients with obesity: insights from the Stress CMR Perfusion Imaging in the United States (SPINS) registry. Eur Heart J Cardiovasc Imaging. 2021 Apr 28;22(5):518-527. doi: 10.1093/ehjci/jeaa281."
+        },
+        {
+          "pmid": "32771575",
+          "type": "BACKGROUND",
+          "citation": "Ge Y, Antiochos P, Steel K, Bingham S, Abdullah S, Chen YY, Mikolich JR, Arai AE, Bandettini WP, Shanbhag SM, Patel AR, Farzaneh-Far A, Heitner JF, Shenoy C, Leung SW, Gonzalez JA, Shah DJ, Raman SV, Ferrari VA, Schulz-Menger J, Stuber M, Simonetti OP, Kwong RY. Prognostic Value of Stress CMR Perfusion Imaging in Patients With Reduced Left Ventricular Function. JACC Cardiovasc Imaging. 2020 Oct;13(10):2132-2145. doi: 10.1016/j.jcmg.2020.05.034. Epub 2020 Aug 5."
+        },
+        {
+          "pmid": "35033498",
+          "type": "BACKGROUND",
+          "citation": "Moschetti K, Kwong RY, Petersen SE, Lombardi M, Garot J, Atar D, Rademakers FE, Sierra-Galan LM, Mavrogeni S, Li K, Fernandes JL, Schneider S, Pinget C, Ge Y, Antiochos P, Deluigi C, Bruder O, Mahrholdt H, Schwitter J. Cost-Minimization Analysis for Cardiac Revascularization in 12 Health Care Systems Based on the EuroCMR/SPINS Registries. JACC Cardiovasc Imaging. 2022 Apr;15(4):607-625. doi: 10.1016/j.jcmg.2021.11.008. Epub 2022 Jan 12."
+        },
+        {
+          "pmid": "31582133",
+          "type": "RESULT",
+          "citation": "Kwong RY, Ge Y, Steel K, Bingham S, Abdullah S, Fujikura K, Wang W, Pandya A, Chen YY, Mikolich JR, Boland S, Arai AE, Bandettini WP, Shanbhag SM, Patel AR, Narang A, Farzaneh-Far A, Romer B, Heitner JF, Ho JY, Singh J, Shenoy C, Hughes A, Leung SW, Marji M, Gonzalez JA, Mehta S, Shah DJ, Debs D, Raman SV, Guha A, Ferrari VA, Schulz-Menger J, Hachamovitch R, Stuber M, Simonetti OP. Cardiac Magnetic Resonance Stress Perfusion Imaging for Evaluation of Patients With Chest Pain. J Am Coll Cardiol. 2019 Oct 8;74(14):1741-1755. doi: 10.1016/j.jacc.2019.07.074."
+        },
+        {
+          "pmid": "32819469",
+          "type": "RESULT",
+          "citation": "Antiochos P, Ge Y, Steel K, Bingham S, Abdullah S, Mikolich JR, Arai AE, Bandettini WP, Patel AR, Farzaneh-Far A, Heitner JF, Shenoy C, Leung SW, Gonzalez JA, Shah DJ, Raman SV, Ferrari VA, Schulz-Menger J, Stuber M, Simonetti OP, Kwong RY; SPINS Study Investigators. Imaging of Clinically Unrecognized Myocardial Fibrosis in Patients With Suspected Coronary Artery Disease. J Am Coll Cardiol. 2020 Aug 25;76(8):945-957. doi: 10.1016/j.jacc.2020.06.063."
+        },
+        {
+          "pmid": "32417337",
+          "type": "RESULT",
+          "citation": "Ge Y, Pandya A, Steel K, Bingham S, Jerosch-Herold M, Chen YY, Mikolich JR, Arai AE, Bandettini WP, Patel AR, Farzaneh-Far A, Heitner JF, Shenoy C, Leung SW, Gonzalez JA, Shah DJ, Raman SV, Ferrari VA, Schulz-Menger J, Hachamovitch R, Stuber M, Simonetti OP, Kwong RY. Cost-Effectiveness Analysis of Stress Cardiovascular Magnetic Resonance Imaging for Stable Chest Pain Syndromes. JACC Cardiovasc Imaging. 2020 Jul;13(7):1505-1517. doi: 10.1016/j.jcmg.2020.02.029. Epub 2020 May 13."
+        },
+        {
+          "pmid": "34419400",
+          "type": "RESULT",
+          "citation": "Antiochos P, Ge Y, Heydari B, Steel K, Bingham S, Abdullah SM, Mikolich JR, Arai AE, Bandettini WP, Patel AR, Farzaneh-Far A, Heitner JF, Shenoy C, Leung SW, Gonzalez JA, Shah DJ, Raman SV, Ferrari VA, Schulz-Menger J, Stuber M, Simonetti OP, Kwong RY. Prognostic Value of Stress Cardiac Magnetic Resonance in Patients With Known Coronary Artery Disease. JACC Cardiovasc Imaging. 2022 Jan;15(1):60-71. doi: 10.1016/j.jcmg.2021.06.025. Epub 2021 Aug 18."
+        },
+        {
+          "pmid": "39425725",
+          "type": "DERIVED",
+          "citation": "Ge Y, Antiochos P, Bernhard B, Heydari B, Steel K, Bingham S, Mikolich JR, Arai AE, Bandettini WP, Patel AR, Shanbhag SM, Farzaneh-Far A, Heitner JF, Shenoy C, Leung SW, Gonzalez JA, Shah DJ, Raman SV, Ferrari VA, Schulz-Menger J, Stuber M, Simonetti OP, Kwong RY. Stress CMR Perfusion Imaging in the Medicare-Eligible Population: Insights From the SPINS Study. JACC Cardiovasc Imaging. 2025 Jan;18(1):33-44. doi: 10.1016/j.jcmg.2024.07.029. Epub 2024 Oct 16."
+        },
+        {
+          "pmid": "36764892",
+          "type": "DERIVED",
+          "citation": "Heydari B, Ge Y, Antiochos P, Islam S, Steel K, Bingham S, Abdullah S, Mikolich JR, Arai AE, Bandettini WP, Patel AR, Shanbhag SM, Farzaneh-Far A, Heitner JF, Shenoy C, Leung SW, Gonzalez JA, Raman SV, Ferrari VA, Shah DJ, Schulz-Menger J, Stuber M, Simonetti OP, Kwong RY. Sex-Specific Stress Perfusion Cardiac Magnetic Resonance Imaging in Suspected Ischemic Heart Disease: Insights From SPINS Retrospective Registry. JACC Cardiovasc Imaging. 2023 Jun;16(6):749-764. doi: 10.1016/j.jcmg.2022.11.025. Epub 2023 Feb 8."
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "UNDECIDED"
+    }
+  },
+  "resultsSection": {
+    "participantFlowModule": {
+      "preAssignmentDetails": "Inclusion Criteria: all of the following at time of imaging:\n\n1. male or female at age 35-85 years,\n2. presence of either symptoms suspicious of ischemia, or abnormal electrocardiography with a suspicion of coronary artery disease\n3. at least 2 of the following risk factors: patient age \\> 50 for male, 60 for female, diabetes, hypertension, hypercholesterolemia, family history of premature coronary disease, Body mass index\\> 30, peripheral artery disease, any hx of coronary artery disease.",
+      "recruitmentDetails": "Consecutive patients who underwent a stress cardiac magnetic resonance (CMR) performed for assessment of stable chest pain syndromes or abnormal ECG between 1/1/2008 and 12/31/2013 were retrospectively identified. Their follow-up clinical outcome of at least 4 years after the date of stress CMR imaging study was collected between 12/1/2016 and 11/30/2019 and entered into a central SPINS registry database using standardized questions and data formats.",
+      "groups": [
+        {
+          "id": "FG000",
+          "title": "Retrospective Multicenter Cohort From 13 US Centers Referred to Stress CMR for Stable Chest Pain",
+          "description": "Retrospective N=2,349 patients from 13 US centers referred for stress cardiac magnetic resonance imaging for evaluation of stable chest pain syndromes."
+        }
+      ],
+      "periods": [
+        {
+          "title": "Overall Study",
+          "milestones": [
+            {
+              "type": "STARTED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "comment": "A minimal of 4-year of clinical follow-up defined a successful follow-up. Follow-up data of interest included cardiovascular outcome events including a) primary outcome events: death (cardiovascular or not cardiovascular) and acute myocardial infarction, and b) secondary outcome events: any primary outcome, hospitalization for unstable angina or heart failure, and late coronary artery bypass surgery (at least 6 months after index cardiac magnetic resonance imaging study).",
+                  "numSubjects": "2349"
+                }
+              ]
+            },
+            {
+              "type": "COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "2294"
+                }
+              ]
+            },
+            {
+              "type": "NOT COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "55"
+                }
+              ]
+            }
+          ],
+          "dropWithdraws": [
+            {
+              "type": "Lost to Follow-up",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "55"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "baselineCharacteristicsModule": {
+      "groups": [
+        {
+          "id": "BG000",
+          "title": "Stress CMR and Stable Chest Pain",
+          "description": "Patients with chest pain syndromes suspicious for obstructive CAD who underwent stress CMR."
+        }
+      ],
+      "denoms": [
+        {
+          "units": "Participants",
+          "counts": [
+            {
+              "groupId": "BG000",
+              "value": "2349"
+            }
+          ]
+        }
+      ],
+      "measures": [
+        {
+          "title": "Age, Categorical",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2349"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "<=18 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "title": "Between 18 and 65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "1185"
+                    }
+                  ]
+                },
+                {
+                  "title": ">=65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "1164"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Age, Continuous",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "years",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2349"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "63",
+                      "spread": "11"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Sex: Female, Male",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2349"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "1104"
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "1245"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Race and Ethnicity Not Collected",
+          "populationDescription": "Race and Ethnicity were not collected from any participant.",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Region of Enrollment",
+          "paramType": "NUMBER",
+          "unitOfMeasure": "participants",
+          "classes": [
+            {
+              "title": "United States",
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2349"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2349"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "CAD Consortium Score, Basic",
+          "description": "Scale: Pre-test probability of Coronary Artery Disease (CAD consortium) Range: minimum 0% and maximum 100% Higher values represent a worse outcome.",
+          "paramType": "MEAN",
+          "dispersionType": "FULL_RANGE",
+          "unitOfMeasure": "percentage",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2349"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "34",
+                      "lowerLimit": "24",
+                      "upperLimit": "54"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "outcomeMeasuresModule": {
+      "outcomeMeasures": [
+        {
+          "type": "PRIMARY",
+          "title": "Cardiovascular Mortality",
+          "description": "Patient mortality due to cardiac or vascular events",
+          "populationDescription": "total cohort at risk",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019).",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Stress CMR and Stable Chest Pain",
+              "description": "Patients with chest pain syndromes suspicious for obstructive CAD who underwent stress CMR."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "2294"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "74"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "Acute Myocardial Infarction",
+          "description": "Acute myocardial infarction events that occurred after the index stress cardiac magnetic resonance imaging study, during the follow-up period",
+          "populationDescription": "total cohort at risk",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019).",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Stress CMR and stable chest pain",
+              "description": "Patients with chest pain syndromes suspicious for obstructive CAD who underwent stress CMR."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "2294"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "77"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Cardiac Hospitalizations",
+          "description": "Cardiac hospitalizations for unstable angina or worsened or new heart failure",
+          "populationDescription": "total cohort at risk",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019).",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Stress CMR and stable chest pain",
+              "description": "Patients with chest pain syndromes suspicious for obstructive CAD who underwent stress CMR."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "2349"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "124"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Late Coronary Arterial Bypass Surgery",
+          "description": "Coronary arterial bypass surgery beyond 6 months after cardiac magnetic resonance imaging",
+          "populationDescription": "total cohort at risk",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019).",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Stress CMR and stable chest pain",
+              "description": "Patients with chest pain syndromes suspicious for obstructive CAD who underwent stress CMR."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "2294"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "44"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Incremental Cost-Effectiveness Ratio in Dollar/Quality-Adjusted Life Year",
+          "description": "Healthcare costs spent for downstream cardiovascular testing after the cardiac magnetic resonance imaging study. The trade-offs between quality-adjusted life years and costs are evaluated using incremental cost-effectiveness analysis methods.",
+          "populationDescription": "total cohort at risk",
+          "reportingStatus": "POSTED",
+          "paramType": "NUMBER",
+          "unitOfMeasure": "Dollar/Quality-Adjusted Life Year",
+          "timeFrame": "Between 12/1/2016 to 11/30/2019, the outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019).",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Stress CMR and stable chest pain",
+              "description": "Patients with chest pain syndromes suspicious for obstructive CAD who underwent stress CMR."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "2294"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "52000"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "adverseEventsModule": {
+      "frequencyThreshold": "0",
+      "timeFrame": "There was no study-related adverse event given the retrospective collection of data between 12/1/2016 to 11/30/2019, while outcome were retrospectively assessed from the date of the first index cardiac magnetic resonance imaging study (Jan-2008) to at least 4 years following the last index CMR or through study completion (Nov-2019).",
+      "description": "The definition of adverse event and/or serious adverse event was not different. However, study related adverse event was not relevant due to the non-interventional nature of this study.",
+      "eventGroups": [
+        {
+          "id": "EG000",
+          "title": "Stress CMR and Stable Chest Pain",
+          "description": "Patients with chest pain syndromes suspicious for obstructive CAD who underwent stress CMR.",
+          "deathsNumAffected": 255,
+          "deathsNumAtRisk": 2294,
+          "seriousNumAffected": 0,
+          "seriousNumAtRisk": 2294,
+          "otherNumAffected": 0,
+          "otherNumAtRisk": 2294
+        }
+      ]
+    },
+    "moreInfoModule": {
+      "certainAgreement": {
+        "piSponsorEmployee": false,
+        "restrictiveAgreement": false
+      },
+      "pointOfContact": {
+        "title": "Raymond Y. Kwong, MD MPH",
+        "organization": "Brigham and Women's Hospital",
+        "email": "rykwong@bwh.harvard.edu",
+        "phone": "8573071960"
+      }
+    }
+  },
+  "documentSection": {
+    "largeDocumentModule": {
+      "largeDocs": [
+        {
+          "typeAbbrev": "Prot_SAP",
+          "hasProtocol": true,
+          "hasSap": true,
+          "hasIcf": false,
+          "label": "Study Protocol and Statistical Analysis Plan",
+          "date": "2018-10-29",
+          "uploadDate": "2022-07-04T20:07",
+          "filename": "Prot_SAP_000.pdf",
+          "size": 1118823
+        }
+      ]
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-01-09"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D017202",
+          "term": "Myocardial Ischemia"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D006331",
+          "term": "Heart Diseases"
+        },
+        {
+          "id": "D002318",
+          "term": "Cardiovascular Diseases"
+        },
+        {
+          "id": "D014652",
+          "term": "Vascular Diseases"
+        }
+      ]
+    },
+    "interventionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D055420",
+          "term": "Perfusion Imaging"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D011877",
+          "term": "Radionuclide Imaging"
+        },
+        {
+          "id": "D003952",
+          "term": "Diagnostic Imaging"
+        },
+        {
+          "id": "D019937",
+          "term": "Diagnostic Techniques and Procedures"
+        },
+        {
+          "id": "D003933",
+          "term": "Diagnosis"
+        },
+        {
+          "id": "D003947",
+          "term": "Diagnostic Techniques, Radioisotope"
+        }
+      ]
+    }
+  },
+  "hasResults": true
+}

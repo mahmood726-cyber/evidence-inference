@@ -1,0 +1,115 @@
+{
+  "passed": 27,
+  "total": 27,
+  "pass_rate": 100.0,
+  "results": [
+    {
+      "test": "calculateICC function exists",
+      "passed": true
+    },
+    {
+      "test": "calculateDesignEffect function exists",
+      "passed": true
+    },
+    {
+      "test": "calculateEffectiveSampleSize function exists",
+      "passed": true
+    },
+    {
+      "test": "runOneStageIPD function exists",
+      "passed": true
+    },
+    {
+      "test": "runTwoStageIPD function exists",
+      "passed": true
+    },
+    {
+      "test": "calculateSandwichSE function exists",
+      "passed": true
+    },
+    {
+      "test": "runGEE function exists",
+      "passed": true
+    },
+    {
+      "test": "showClusteredIPDAnalysis function exists",
+      "passed": true
+    },
+    {
+      "test": "BENCHMARK_DATASETS object exists",
+      "passed": true
+    },
+    {
+      "test": "BCG dataset exists",
+      "passed": true
+    },
+    {
+      "test": "BCG has expected results",
+      "passed": true
+    },
+    {
+      "test": "runValidationStudy function exists",
+      "passed": true
+    },
+    {
+      "test": "validateDataset function exists",
+      "passed": true
+    },
+    {
+      "test": "runFixedEffects function exists",
+      "passed": true
+    },
+    {
+      "test": "runRandomEffectsDL function exists",
+      "passed": true
+    },
+    {
+      "test": "runRandomEffectsREML function exists",
+      "passed": true
+    },
+    {
+      "test": "runRandomEffectsPM function exists",
+      "passed": true
+    },
+    {
+      "test": "showValidationStudy function exists",
+      "passed": true
+    },
+    {
+      "test": "DL estimate within tolerance",
+      "passed": true
+    },
+    {
+      "test": "DL tau2 within tolerance",
+      "passed": true
+    },
+    {
+      "test": "REML estimate within tolerance",
+      "passed": true
+    },
+    {
+      "test": "ICC calculation valid",
+      "passed": true
+    },
+    {
+      "test": "Validation pass rate >= 80%",
+      "passed": true
+    },
+    {
+      "test": "Max deviation acceptable",
+      "passed": true
+    },
+    {
+      "test": "Clustered IPD button exists",
+      "passed": true
+    },
+    {
+      "test": "Validation button exists",
+      "passed": true
+    },
+    {
+      "test": "Validation modal opens",
+      "passed": true
+    }
+  ]
+}

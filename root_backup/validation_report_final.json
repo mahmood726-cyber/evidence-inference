@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "passed": 15,
+    "failed": 0,
+    "total": 15,
+    "pass_rate": "100.0%"
+  },
+  "details": [
+    {
+      "name": "mean",
+      "js": 3.0,
+      "r": 3,
+      "match": true,
+      "diff": 0.0
+    },
+    {
+      "name": "pnorm",
+      "js": 0.975002,
+      "r": 0.975,
+      "match": true,
+      "diff": 0.0
+    },
+    {
+      "name": "qnorm",
+      "js": 1.959964,
+      "r": 1.96,
+      "match": true,
+      "diff": 0.0
+    },
+    {
+      "name": "pchisq",
+      "js": 0.955053,
+      "r": 0.95,
+      "match": true,
+      "diff": 0.53
+    },
+    {
+      "name": "pt",
+      "js": 0.963306,
+      "r": 0.9633,
+      "match": true,
+      "diff": 0.0
+    },
+    {
+      "name": "fixed_effect",
+      "js": 0.435847,
+      "r": 0.4358,
+      "match": true,
+      "diff": 0.01
+    },
+    {
+      "name": "fixed_se",
+      "js": 0.043756,
+      "r": 0.0438,
+      "match": true,
+      "diff": 0.1
+    },
+    {
+      "name": "egger_t",
+      "js": 2.044978,
+      "r": 2.045,
+      "match": true,
+      "diff": 0.0
+    },
+    {
+      "name": "egger_p",
+      "js": 0.075091,
+      "r": 0.0751,
+      "match": true,
+      "diff": 0.01
+    },
+    {
+      "name": "begg_tau",
+      "js": 0.511111,
+      "r": 0.5111,
+      "match": true,
+      "diff": 0.0
+    },
+    {
+      "name": "tf_k0",
+      "js": 2.0,
+      "r": 2,
+      "match": true,
+      "diff": 0.0
+    },
+    {
+      "name": "tf_adj",
+      "js": 0.405298,
+      "r": 0.4072,
+      "match": true,
+      "diff": 0.47
+    },
+    {
+      "name": "nma_AB",
+      "js": -0.324589,
+      "r": 0.3246,
+      "match": true,
+      "diff": 0.0
+    },
+    {
+      "name": "nma_AC",
+      "js": -0.538355,
+      "r": 0.5384,
+      "match": true,
+      "diff": 0.01
+    },
+    {
+      "name": "nma_BC",
+      "js": -0.213766,
+      "r": 0.2138,
+      "match": true,
+      "diff": 0.02
+    }
+  ]
+}

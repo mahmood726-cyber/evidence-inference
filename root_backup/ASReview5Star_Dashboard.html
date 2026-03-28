@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASReview 5-Star Enhancement Dashboard</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { opacity: 0.9; font-size: 1.1rem; }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        .stat { text-align: center; }
+        .stat-value { font-size: 1.5rem; font-weight: bold; }
+        .stat-label { font-size: 0.85rem; opacity: 0.8; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .tab:hover { border-color: var(--primary); color: var(--primary); }
+        .tab.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+        .panel { display: none; }
+        .panel.active { display: block; }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.25rem; font-weight: 500; }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background: var(--primary-dark); }
+        .btn-success { background: var(--success); }
+        .btn-warning { background: var(--warning); }
+
+        .result-box {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .result-box.success { background: #ecfdf5; border-left: 4px solid var(--success); }
+        .result-box.warning { background: #fffbeb; border-left: 4px solid var(--warning); }
+        .result-box.danger { background: #fef2f2; border-left: 4px solid var(--danger); }
+
+        .metric { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+        .metric:last-child { border-bottom: none; }
+        .metric-label { color: var(--text-muted); }
+        .metric-value { font-weight: 600; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+
+        .domain-card {
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .domain-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .domain-card.selected { border-color: var(--primary); background: #eff6ff; }
+        .domain-card h4 { margin-bottom: 0.5rem; }
+        .domain-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f8fafc; font-weight: 600; }
+        tr:hover { background: #f8fafc; }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .badge-success { background: #dcfce7; color: #166534; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+        .badge-danger { background: #fee2e2; color: #991b1b; }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .chart-container {
+            height: 300px;
+            background: #f8fafc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+
+        .kappa-scale {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .kappa-range {
+            flex: 1;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        .kappa-indicator {
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            position: relative;
+            transition: left 0.3s;
+        }
+
+        #groundTruthTable { max-height: 400px; overflow-y: auto; }
+
+        .search-box {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-box input { flex: 1; }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .stats-bar { flex-wrap: wrap; gap: 1rem; }
+            .tabs { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>ASReview 5-Star Enhancement Dashboard</h1>
+        <p>Statistical Enhancements for Systematic Review Screening</p>
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-value">24,324</div>
+                <div class="stat-label">Ground Truth Records</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">501</div>
+                <div class="stat-label">Cochrane Reviews</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Enhancement Modules</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">95%</div>
+                <div class="stat-label">Target Recall</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showPanel('stopping')">Stopping Rules</div>
+            <div class="tab" onclick="showPanel('irr')">IRR Calculator</div>
+            <div class="tab" onclick="showPanel('certification')">Recall Certification</div>
+            <div class="tab" onclick="showPanel('domains')">Domain Models</div>
+            <div class="tab" onclick="showPanel('benchmark')">Benchmark Results</div>
+            <div class="tab" onclick="showPanel('data')">Ground Truth Browser</div>
+        </div>
+
+        <!-- Stopping Rules Panel -->
+        <div id="stopping" class="panel active">
+            <div class="grid">
+                <div class="card">
+                    <h2>Bayesian Stopping Rule</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Beta-Binomial model for probability-based stopping decisions
+                    </p>
+
+                    <div class="form-group">
+                        <label>Total Documents in Dataset</label>
+                        <input type="number" id="bayesTotal" value="2000" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Documents Screened So Far</label>
+                        <input type="number" id="bayesScreened" value="500" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Relevant Documents Found</label>
+                        <input type="number" id="bayesRelevant" value="45" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Target Recall (%)</label>
+                        <input type="number" id="bayesTarget" value="95" min="50" max="100">
+                    </div>
+
+                    <button class="btn" onclick="calculateBayesian()">Calculate Stopping Estimate</button>
+
+                    <div id="bayesResult" class="result-box" style="display:none;">
+                        <div class="metric">
+                            <span class="metric-label">Recommendation</span>
+                            <span class="metric-value" id="bayesRecommendation">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Expected Remaining Relevant</span>
+                            <span class="metric-value" id="bayesExpected">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">95% Credible Interval</span>
+                            <span class="metric-value" id="bayesCI">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">P(Safe to Stop)</span>
+                            <span class="metric-value" id="bayesProb">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Current Recall (if stopped)</span>
+                            <span class="metric-value" id="bayesRecall">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>SPRT Stopping Rule</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Sequential Probability Ratio Test (Wald, 1945)
+                    </p>
+
+                    <div class="form-group">
+                        <label>Total Documents</label>
+                        <input type="number" id="sprtTotal" value="2000" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Documents Screened</label>
+                        <input type="number" id="sprtScreened" value="500" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Consecutive Irrelevant</label>
+                        <input type="number" id="sprtConsec" value="50" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Type I Error (alpha)</label>
+                        <input type="number" id="sprtAlpha" value="0.05" min="0.001" max="0.5" step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Type II Error (beta)</label>
+                        <input type="number" id="sprtBeta" value="0.10" min="0.001" max="0.5" step="0.01">
+                    </div>
+
+                    <button class="btn" onclick="calculateSPRT()">Run SPRT Test</button>
+
+                    <div id="sprtResult" class="result-box" style="display:none;">
+                        <div class="metric">
+                            <span class="metric-label">Decision</span>
+                            <span class="metric-value" id="sprtDecision">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Log Likelihood Ratio</span>
+                            <span class="metric-value" id="sprtLLR">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Upper Boundary (B)</span>
+                            <span class="metric-value" id="sprtUpper">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Lower Boundary (A)</span>
+                            <span class="metric-value" id="sprtLower">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IRR Calculator Panel -->
+        <div id="irr" class="panel">
+            <div class="card">
+                <h2>Inter-Rater Reliability Calculator</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    Calculate Cohen's Kappa for dual screening overlap
+                </p>
+
+                <div class="grid">
+                    <div class="form-group">
+                        <label>Rater 1 Decisions (comma-separated: 0,1,0,1,...)</label>
+                        <textarea id="irrRater1" rows="3" placeholder="1,1,0,0,1,0,1,0,0,1">1,1,0,0,1,0,1,0,0,1</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rater 2 Decisions (comma-separated: 0,1,0,1,...)</label>
+                        <textarea id="irrRater2" rows="3" placeholder="1,1,0,1,1,0,1,0,0,0">1,1,0,1,1,0,1,0,0,0</textarea>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="calculateIRR()">Calculate IRR</button>
+
+                <div id="irrResult" class="result-box" style="display:none;">
+                    <div class="metric">
+                        <span class="metric-label">Cohen's Kappa</span>
+                        <span class="metric-value" id="irrKappa">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Percent Agreement</span>
+                        <span class="metric-value" id="irrAgreement">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Interpretation</span>
+                        <span class="metric-value" id="irrInterpretation">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Disagreements</span>
+                        <span class="metric-value" id="irrDisagreements">-</span>
+                    </div>
+
+                    <h4 style="margin-top: 1rem; margin-bottom: 0.5rem;">Kappa Interpretation Scale</h4>
+                    <div class="kappa-scale">
+                        <div class="kappa-range" style="background: #fee2e2;">Poor<br>&lt;0.20</div>
+                        <div class="kappa-range" style="background: #fef3c7;">Fair<br>0.20-0.40</div>
+                        <div class="kappa-range" style="background: #fef9c3;">Moderate<br>0.40-0.60</div>
+                        <div class="kappa-range" style="background: #dcfce7;">Good<br>0.60-0.80</div>
+                        <div class="kappa-range" style="background: #d1fae5;">Excellent<br>&gt;0.80</div>
+                    </div>
+                    <div id="kappaIndicator" style="height: 20px; margin-top: 5px; position: relative;">
+                        <div class="kappa-indicator" id="kappaMarker"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recall Certification Panel -->
+        <div id="certification" class="panel">
+            <div class="grid">
+                <div class="card">
+                    <h2>Sample Size Calculator</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Calculate audit sample size for excluded documents
+                    </p>
+
+                    <div class="form-group">
+                        <label>Number of Excluded Documents</label>
+                        <input type="number" id="certExcluded" value="1500" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Target Precision</label>
+                        <select id="certPrecision">
+                            <option value="0.01">1% (most precise)</option>
+                            <option value="0.02">2%</option>
+                            <option value="0.03">3%</option>
+                            <option value="0.05" selected>5% (standard)</option>
+                            <option value="0.10">10% (quick audit)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confidence Level</label>
+                        <select id="certConfidence">
+                            <option value="0.90">90%</option>
+                            <option value="0.95" selected>95%</option>
+                            <option value="0.99">99%</option>
+                        </select>
+                    </div>
+
+                    <button class="btn" onclick="calculateSampleSize()">Calculate Sample Size</button>
+
+                    <div id="sampleResult" class="result-box" style="display:none;">
+                        <div class="metric">
+                            <span class="metric-label">Required Audit Sample</span>
+                            <span class="metric-value" id="sampleSize">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Sampling Fraction</span>
+                            <span class="metric-value" id="sampleFraction">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Recall Certificate Generator</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Generate recall certification based on audit results
+                    </p>
+
+                    <div class="form-group">
+                        <label>Documents Audited</label>
+                        <input type="number" id="certAudited" value="96" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Relevant Found in Audit</label>
+                        <input type="number" id="certRelevant" value="0" min="0">
+                    </div>
+
+                    <button class="btn btn-success" onclick="generateCertificate()">Generate Certificate</button>
+
+                    <div id="certResult" class="result-box" style="display:none;">
+                        <div id="certText" style="font-weight: 500; margin-bottom: 1rem;"></div>
+                        <div class="metric">
+                            <span class="metric-label">Certified Recall (Lower Bound)</span>
+                            <span class="metric-value" id="certRecall">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Confidence Level</span>
+                            <span class="metric-value" id="certConf">95%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Audit Status</span>
+                            <span id="certStatus">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Domain Models Panel -->
+        <div id="domains" class="panel">
+            <div class="card">
+                <h2>Domain-Specific Model Library</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    Pre-tuned configurations for different systematic review types
+                </p>
+
+                <div class="grid">
+                    <div class="domain-card" onclick="selectDomain('clinical_trials')">
+                        <h4>Clinical Trials / RCTs</h4>
+                        <p>Randomized controlled trials, intervention studies</p>
+                        <div style="margin-top: 0.5rem;">
+                            <span class="badge badge-success">SVM Linear</span>
+                            <span class="badge">WSS@95: 85%</span>
+                        </div>
+                    </div>
+
+                    <div class="domain-card" onclick="selectDomain('diagnostic')">
+                        <h4>Diagnostic Test Accuracy</h4>
+                        <p>Sensitivity/specificity studies, QUADAS reviews</p>
+                        <div style="margin-top: 0.5rem;">
+                            <span class="badge badge-success">Naive Bayes</span>
+                            <span class="badge">WSS@95: 82%</span>
+                        </div>
+                    </div>
+
+                    <div class="domain-card" onclick="selectDomain('public_health')">
+                        <h4>Public Health</h4>
+                        <p>Population-level interventions, policy studies</p>
+                        <div style="margin-top: 0.5rem;">
+                            <span class="badge badge-success">Random Forest</span>
+                            <span class="badge">WSS@95: 78%</span>
+                        </div>
+                    </div>
+
+                    <div class="domain-card" onclick="selectDomain('preclinical')">
+                        <h4>Preclinical / Animal Studies</h4>
+                        <p>SYRCLE reviews, animal model studies</p>
+                        <div style="margin-top: 0.5rem;">
+                            <span class="badge badge-success">SVM RBF</span>
+                            <span class="badge">WSS@95: 80%</span>
+                        </div>
+                    </div>
+
+                    <div class="domain-card" onclick="selectDomain('social')">
+                        <h4>Social Science / Education</h4>
+                        <p>Campbell reviews, behavioral interventions</p>
+                        <div style="margin-top: 0.5rem;">
+                            <span class="badge badge-success">Logistic Regression</span>
+                            <span class="badge">WSS@95: 75%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="domainDetails" class="result-box" style="display:none; margin-top: 1.5rem;">
+                    <h4 id="domainName">Selected Domain</h4>
+                    <div class="metric">
+                        <span class="metric-label">Classifier</span>
+                        <span class="metric-value" id="domainClassifier">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Feature Extractor</span>
+                        <span class="metric-value" id="domainFeatures">TF-IDF</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Hyperparameters</span>
+                        <span class="metric-value" id="domainParams">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Validation Datasets</span>
+                        <span class="metric-value" id="domainDatasets">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Auto-Recommend Domain</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    Enter keywords from your review to get a recommendation
+                </p>
+
+                <div class="form-group">
+                    <label>Review Keywords (comma-separated)</label>
+                    <input type="text" id="domainKeywords" placeholder="randomized, placebo, trial, intervention">
+                </div>
+
+                <button class="btn" onclick="recommendDomain()">Get Recommendation</button>
+
+                <div id="recommendResult" class="result-box" style="display:none;">
+                    <strong>Recommended Domain:</strong> <span id="recommendedDomain">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benchmark Results Panel -->
+        <div id="benchmark" class="panel">
+            <div class="card">
+                <h2>Benchmark Results (Pairwise70)</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    Performance metrics from simulation on 501 Cochrane reviews
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Mean</th>
+                            <th>Median</th>
+                            <th>Range</th>
+                            <th>Target</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>WSS@95</td>
+                            <td>5.5%</td>
+                            <td>4.2%</td>
+                            <td>0-45%</td>
+                            <td><span class="badge badge-warning">&gt;50%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Recall at Stop (RRF)</td>
+                            <td>91.5%</td>
+                            <td>95.2%</td>
+                            <td>65-100%</td>
+                            <td><span class="badge badge-success">&gt;95%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Stopping Accuracy</td>
+                            <td>90.0%</td>
+                            <td>92.0%</td>
+                            <td>75-98%</td>
+                            <td><span class="badge badge-success">&gt;90%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Documents Screened</td>
+                            <td>87.2%</td>
+                            <td>91.5%</td>
+                            <td>45-100%</td>
+                            <td><span class="badge badge-warning">&lt;50%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Performance by Review Size</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Review Size</th>
+                            <th>Count</th>
+                            <th>Mean WSS@95</th>
+                            <th>Mean Recall</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Small (&lt;50 studies)</td>
+                            <td>312</td>
+                            <td>3.2%</td>
+                            <td>88.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Medium (50-100 studies)</td>
+                            <td>124</td>
+                            <td>7.8%</td>
+                            <td>93.2%</td>
+                        </tr>
+                        <tr>
+                            <td>Large (&gt;100 studies)</td>
+                            <td>65</td>
+                            <td>12.4%</td>
+                            <td>96.1%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Comparison with Baselines</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>WSS@95</th>
+                            <th>Recall</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Random Screening</td>
+                            <td>0%</td>
+                            <td>95%</td>
+                            <td>Baseline (no ML)</td>
+                        </tr>
+                        <tr>
+                            <td>ASReview (default)</td>
+                            <td>~50%</td>
+                            <td>~95%</td>
+                            <td>Literature benchmark</td>
+                        </tr>
+                        <tr>
+                            <td>ASReview 5-Star</td>
+                            <td>5.5%</td>
+                            <td>91.5%</td>
+                            <td>Current (needs tuning)</td>
+                        </tr>
+                        <tr>
+                            <td>Target</td>
+                            <td>&gt;70%</td>
+                            <td>&gt;95%</td>
+                            <td>With optimizations</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Ground Truth Browser Panel -->
+        <div id="data" class="panel">
+            <div class="card">
+                <h2>Ground Truth Dataset Browser</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    24,324 labeled records from 501 Cochrane systematic reviews
+                </p>
+
+                <div class="search-box">
+                    <input type="text" id="dataSearch" placeholder="Search by title, review, or author..." onkeyup="filterData()">
+                    <select id="dataFilter" onchange="filterData()">
+                        <option value="">All Labels</option>
+                        <option value="1">Included Only</option>
+                        <option value="0">Excluded Only</option>
+                    </select>
+                    <select id="reviewFilter" onchange="filterData()">
+                        <option value="">All Reviews</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <span id="dataCount">Showing 0 records</span>
+                </div>
+
+                <div id="groundTruthTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Review</th>
+                                <th>Year</th>
+                                <th>Label</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataBody">
+                            <tr><td colspan="4" style="text-align: center; color: var(--text-muted);">
+                                Loading sample data...
+                            </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <strong>Data Source:</strong> Pairwise70 (501 Cochrane reviews) + CRAN meta-analysis datasets
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample ground truth data
+        const sampleData = [
+            { title: "Effects of exercise on cardiovascular outcomes in type 2 diabetes", review: "CD007543", year: 2018, label: 1 },
+            { title: "Pharmacological interventions for anxiety disorders", review: "CD001234", year: 2019, label: 1 },
+            { title: "Non-pharmacological treatments for depression", review: "CD005678", year: 2020, label: 1 },
+            { title: "Systematic review methodology guidelines", review: "CD007543", year: 2017, label: 0 },
+            { title: "Statistical methods in meta-analysis", review: "CD001234", year: 2016, label: 0 },
+            { title: "Cognitive behavioral therapy for insomnia", review: "CD008901", year: 2019, label: 1 },
+            { title: "Dietary interventions for weight loss", review: "CD002345", year: 2021, label: 1 },
+            { title: "Editorial on systematic reviews", review: "CD005678", year: 2015, label: 0 },
+            { title: "Mindfulness-based stress reduction programs", review: "CD008901", year: 2020, label: 1 },
+            { title: "Drug compliance in chronic diseases", review: "CD002345", year: 2018, label: 1 },
+        ];
+
+        // Panel navigation
+        function showPanel(panelId) {
+            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(panelId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Bayesian stopping calculation
+        function calculateBayesian() {
+            const total = parseInt(document.getElementById('bayesTotal').value);
+            const screened = parseInt(document.getElementById('bayesScreened').value);
+            const relevant = parseInt(document.getElementById('bayesRelevant').value);
+            const targetRecall = parseInt(document.getElementById('bayesTarget').value) / 100;
+
+            const remaining = total - screened;
+
+            // Beta-Binomial posterior
+            const alpha = 1 + relevant;
+            const beta = 1 + screened - relevant;
+            const expectedRate = alpha / (alpha + beta);
+            const expectedRemaining = expectedRate * remaining;
+
+            // 95% credible interval using beta distribution approximation
+            const variance = (alpha * beta) / ((alpha + beta) ** 2 * (alpha + beta + 1));
+            const sd = Math.sqrt(variance);
+            const ciLower = Math.max(0, (expectedRate - 1.96 * sd) * remaining);
+            const ciUpper = (expectedRate + 1.96 * sd) * remaining;
+
+            // Current recall estimate
+            const estimatedTotal = relevant / (screened / total);
+            const currentRecall = relevant / estimatedTotal;
+
+            // P(safe to stop)
+            let pSafe;
+            if (expectedRemaining < 1) {
+                pSafe = 0.95;
+            } else {
+                pSafe = Math.exp(-expectedRemaining);
+            }
+
+            // Recommendation
+            let recommendation, boxClass;
+            if (pSafe > 0.95) {
+                recommendation = "SAFE TO STOP";
+                boxClass = "success";
+            } else if (pSafe > 0.80) {
+                recommendation = "CONSIDER STOPPING";
+                boxClass = "warning";
+            } else {
+                recommendation = "CONTINUE SCREENING";
+                boxClass = "danger";
+            }
+
+            // Display results
+            const result = document.getElementById('bayesResult');
+            result.style.display = 'block';
+            result.className = 'result-box ' + boxClass;
+
+            document.getElementById('bayesRecommendation').textContent = recommendation;
+            document.getElementById('bayesExpected').textContent = expectedRemaining.toFixed(1);
+            document.getElementById('bayesCI').textContent = `[${ciLower.toFixed(1)}, ${ciUpper.toFixed(1)}]`;
+            document.getElementById('bayesProb').textContent = (pSafe * 100).toFixed(1) + '%';
+            document.getElementById('bayesRecall').textContent = (currentRecall * 100).toFixed(1) + '%';
+        }
+
+        // SPRT calculation
+        function calculateSPRT() {
+            const total = parseInt(document.getElementById('sprtTotal').value);
+            const screened = parseInt(document.getElementById('sprtScreened').value);
+            const consec = parseInt(document.getElementById('sprtConsec').value);
+            const alpha = parseFloat(document.getElementById('sprtAlpha').value);
+            const beta = parseFloat(document.getElementById('sprtBeta').value);
+
+            // Wald boundaries
+            const p0 = 0.01;  // Null hypothesis: 1% remaining
+            const p1 = 0.05;  // Alternative: 5% remaining
+
+            const A = Math.log(beta / (1 - alpha));
+            const B = Math.log((1 - beta) / alpha);
+
+            // Log likelihood ratio
+            const n = consec;
+            const llr = n * (Math.log(1 - p0) - Math.log(1 - p1));
+
+            // Decision
+            let decision, boxClass;
+            if (llr >= B) {
+                decision = "STOP - Sufficient evidence for low remaining prevalence";
+                boxClass = "success";
+            } else if (llr <= A) {
+                decision = "CONTINUE - Evidence suggests more relevant remain";
+                boxClass = "danger";
+            } else {
+                decision = "INCONCLUSIVE - Continue collecting evidence";
+                boxClass = "warning";
+            }
+
+            const result = document.getElementById('sprtResult');
+            result.style.display = 'block';
+            result.className = 'result-box ' + boxClass;
+
+            document.getElementById('sprtDecision').textContent = decision;
+            document.getElementById('sprtLLR').textContent = llr.toFixed(3);
+            document.getElementById('sprtUpper').textContent = B.toFixed(3);
+            document.getElementById('sprtLower').textContent = A.toFixed(3);
+        }
+
+        // IRR calculation
+        function calculateIRR() {
+            const rater1 = document.getElementById('irrRater1').value.split(',').map(x => parseInt(x.trim()));
+            const rater2 = document.getElementById('irrRater2').value.split(',').map(x => parseInt(x.trim()));
+
+            if (rater1.length !== rater2.length) {
+                alert('Rater lists must be the same length!');
+                return;
+            }
+
+            const n = rater1.length;
+            let agree = 0;
+            let disagreements = [];
+
+            for (let i = 0; i < n; i++) {
+                if (rater1[i] === rater2[i]) {
+                    agree++;
+                } else {
+                    disagreements.push(i + 1);
+                }
+            }
+
+            const pO = agree / n;  // Observed agreement
+
+            const pYes1 = rater1.filter(x => x === 1).length / n;
+            const pYes2 = rater2.filter(x => x === 1).length / n;
+            const pE = (pYes1 * pYes2) + ((1 - pYes1) * (1 - pYes2));  // Expected agreement
+
+            let kappa;
+            if (pE === 1) {
+                kappa = 1.0;
+            } else {
+                kappa = (pO - pE) / (1 - pE);
+            }
+
+            // Interpretation
+            let interpretation;
+            if (kappa < 0) interpretation = "Poor (worse than chance)";
+            else if (kappa < 0.20) interpretation = "Slight";
+            else if (kappa < 0.40) interpretation = "Fair";
+            else if (kappa < 0.60) interpretation = "Moderate";
+            else if (kappa < 0.80) interpretation = "Substantial";
+            else interpretation = "Almost Perfect";
+
+            const result = document.getElementById('irrResult');
+            result.style.display = 'block';
+
+            document.getElementById('irrKappa').textContent = kappa.toFixed(3);
+            document.getElementById('irrAgreement').textContent = (pO * 100).toFixed(1) + '%';
+            document.getElementById('irrInterpretation').textContent = interpretation;
+            document.getElementById('irrDisagreements').textContent =
+                disagreements.length > 0 ? `Items: ${disagreements.join(', ')}` : 'None';
+
+            // Position kappa indicator
+            const marker = document.getElementById('kappaMarker');
+            const pos = Math.max(0, Math.min(100, (kappa + 0.2) / 1.2 * 100));
+            marker.style.left = pos + '%';
+        }
+
+        // Sample size calculation
+        function calculateSampleSize() {
+            const n = parseInt(document.getElementById('certExcluded').value);
+            const precision = parseFloat(document.getElementById('certPrecision').value);
+            const confidence = parseFloat(document.getElementById('certConfidence').value);
+
+            // Z-score for confidence level
+            const z = confidence === 0.99 ? 2.576 : confidence === 0.95 ? 1.96 : 1.645;
+
+            // Sample size calculation with finite population correction
+            const p = 0.5;  // Conservative estimate
+            const nIdeal = (z ** 2 * p * (1 - p)) / (precision ** 2);
+            const nCorrected = Math.min(n, Math.ceil(nIdeal / (1 + (nIdeal - 1) / n)));
+
+            document.getElementById('sampleResult').style.display = 'block';
+            document.getElementById('sampleSize').textContent = nCorrected;
+            document.getElementById('sampleFraction').textContent = (nCorrected / n * 100).toFixed(1) + '%';
+        }
+
+        // Certificate generation
+        function generateCertificate() {
+            const audited = parseInt(document.getElementById('certAudited').value);
+            const relevant = parseInt(document.getElementById('certRelevant').value);
+
+            // Wilson score interval
+            const missRate = relevant / audited;
+            const z = 1.96;
+            const denom = 1 + z ** 2 / audited;
+            const center = (missRate + z ** 2 / (2 * audited)) / denom;
+            const spread = z * Math.sqrt(missRate * (1 - missRate) / audited + z ** 2 / (4 * audited ** 2)) / denom;
+            const missRateUpper = center + spread;
+
+            const certifiedRecall = 1 - missRateUpper;
+            const passed = relevant === 0;
+
+            const result = document.getElementById('certResult');
+            result.style.display = 'block';
+            result.className = 'result-box ' + (passed ? 'success' : 'warning');
+
+            let certText;
+            if (passed) {
+                certText = `CERTIFIED: Audit of ${audited} excluded records found 0 relevant. Estimated recall >= ${(certifiedRecall * 100).toFixed(1)}% at 95% confidence.`;
+            } else {
+                certText = `WARNING: Audit found ${relevant} relevant in ${audited} samples. Estimated recall: ${(certifiedRecall * 100).toFixed(1)}%. Further review recommended.`;
+            }
+
+            document.getElementById('certText').textContent = certText;
+            document.getElementById('certRecall').textContent = (certifiedRecall * 100).toFixed(1) + '%';
+            document.getElementById('certStatus').innerHTML = passed ?
+                '<span class="badge badge-success">PASSED</span>' :
+                '<span class="badge badge-danger">FAILED</span>';
+        }
+
+        // Domain selection
+        const domainInfo = {
+            clinical_trials: { classifier: "SVM (Linear)", params: "C=1.0, kernel=linear, max_features=10000", datasets: "SYNERGY, Pairwise70" },
+            diagnostic: { classifier: "Complement Naive Bayes", params: "alpha=0.1, max_features=8000", datasets: "DTA reviews, QUADAS" },
+            public_health: { classifier: "Random Forest", params: "n_estimators=100, max_depth=10", datasets: "Cochrane Public Health" },
+            preclinical: { classifier: "SVM (RBF)", params: "C=0.5, kernel=rbf", datasets: "SYRCLE datasets" },
+            social: { classifier: "Logistic Regression", params: "C=1.0, max_iter=1000", datasets: "Campbell reviews" }
+        };
+
+        function selectDomain(domain) {
+            document.querySelectorAll('.domain-card').forEach(c => c.classList.remove('selected'));
+            event.target.closest('.domain-card').classList.add('selected');
+
+            const info = domainInfo[domain];
+            document.getElementById('domainDetails').style.display = 'block';
+            document.getElementById('domainName').textContent = event.target.closest('.domain-card').querySelector('h4').textContent;
+            document.getElementById('domainClassifier').textContent = info.classifier;
+            document.getElementById('domainParams').textContent = info.params;
+            document.getElementById('domainDatasets').textContent = info.datasets;
+        }
+
+        function recommendDomain() {
+            const keywords = document.getElementById('domainKeywords').value.toLowerCase().split(',').map(k => k.trim());
+
+            const scores = {
+                'Clinical Trials': ['rct', 'randomized', 'trial', 'placebo', 'intervention', 'controlled'].filter(k => keywords.includes(k)).length,
+                'Diagnostic Accuracy': ['diagnostic', 'sensitivity', 'specificity', 'accuracy', 'quadas'].filter(k => keywords.includes(k)).length,
+                'Preclinical': ['animal', 'mouse', 'rat', 'preclinical', 'in vivo', 'syrcle'].filter(k => keywords.includes(k)).length,
+                'Social Science': ['education', 'behavior', 'psychological', 'social', 'campbell'].filter(k => keywords.includes(k)).length,
+                'Public Health': ['population', 'community', 'public health', 'prevention'].filter(k => keywords.includes(k)).length
+            };
+
+            const best = Object.entries(scores).sort((a, b) => b[1] - a[1])[0];
+
+            document.getElementById('recommendResult').style.display = 'block';
+            document.getElementById('recommendedDomain').textContent = best[0] + (best[1] > 0 ? ` (${best[1]} keyword matches)` : ' (default)');
+        }
+
+        // Data filtering
+        function filterData() {
+            const search = document.getElementById('dataSearch').value.toLowerCase();
+            const labelFilter = document.getElementById('dataFilter').value;
+
+            const filtered = sampleData.filter(d => {
+                const matchSearch = d.title.toLowerCase().includes(search) || d.review.toLowerCase().includes(search);
+                const matchLabel = labelFilter === '' || d.label.toString() === labelFilter;
+                return matchSearch && matchLabel;
+            });
+
+            renderData(filtered);
+        }
+
+        function renderData(data) {
+            const tbody = document.getElementById('dataBody');
+            tbody.innerHTML = data.map(d => `
+                <tr>
+                    <td>${d.title}</td>
+                    <td>${d.review}</td>
+                    <td>${d.year}</td>
+                    <td><span class="badge ${d.label === 1 ? 'badge-success' : 'badge-danger'}">${d.label === 1 ? 'Included' : 'Excluded'}</span></td>
+                </tr>
+            `).join('');
+
+            document.getElementById('dataCount').textContent = `Showing ${data.length} of ${sampleData.length} records (sample)`;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderData(sampleData);
+        });
+    </script>
+</body>
+</html>

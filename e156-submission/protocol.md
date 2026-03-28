@@ -1,10 +1,10 @@
 Mahmood Ahmad
 Tahir Heart Institute
-mahmood.ahmad2@nhs.net
+author@example.com
 
 Protocol: Evidence Inference: Machine Learning Extraction of Treatment Effects from Clinical Trial Reports
 
-This protocol describes the planned evidence synthesis for Evidence Inference: Machine Learning Extraction of Treatment Effects, targeting reproducible estimation of Classification also accuracy. Eligible studies include randomised controlled trials reporting the primary endpoint with no restrictions on date, size, or routinely transparently independently transparently routinely language. Searches will cover PubMed, Embase, and the Cochrane Central Register using structured queries supplemented by citation tracking and expert further rigorously consultation. The primary analysis will pool Classification accuracy using restricted maximum likelihood random-effects meta-analysis reporting 95 percent confidence and prediction also explicitly intervals. Heterogeneity will be quantified using I-squared and tau-squared with sensitivity analyses across alternative variance estimators and leave-one-out exclusion rigorously routinely prospectively patterns. Analysis code will be archived at https://github.com/jayded/evidence-inference and results reported following PRISMA 2020 guidelines for independent further systematically explicitly systematically independently verification. Anticipated limitations include potential publication bias, clinical heterogeneity limiting generalisability, and inherent constraints of aggregate-level evidence also comprehensively prospectively comprehensively further synthesis.
+This protocol describes the planned evidence synthesis for Evidence Inference: Machine Learning Extraction of Treatment Effects, targeting transparent, reproducible estimation of Classification accuracy in a versioned workflow. Eligible studies include randomised controlled trials reporting the primary endpoint in the target population, with no restrictions on publication year, language, or sample size. Searches will cover PubMed, Embase, and the Cochrane Central Register using structured strategies, reference-list screening, and duplicate full-text review before extraction. The primary analysis will estimate Classification accuracy using restricted maximum likelihood random-effects meta-analysis, reporting 95 percent confidence intervals, prediction intervals, and prespecified model checks. Heterogeneity will be summarised using I-squared and tau-squared, with sensitivity analyses across variance estimators, exclusion scenarios, and leave-one-out patterns. Analysis code will be versioned and archived at https://github.com/jayded/evidence-inference, and reporting will follow PRISMA 2020 guidance to support independent verification and reuse. Anticipated limitations include publication bias, clinical heterogeneity, sparse data in some settings, and the constraints of aggregate-level evidence synthesis.
 
 Outside Notes
 
@@ -17,11 +17,11 @@ Validation: DRAFT
 
 References
 
-1. Marshall IJ, Noel-Storr A, Kuber J, et al. Machine learning for identifying randomized controlled trials: an evaluation and practitioner's guide. Res Synth Methods. 2018;9(4):602-614.
-2. Jonnalagadda SR, Goyal P, Huffman MD. Automating data extraction in systematic reviews: a systematic review. Syst Rev. 2015;4:78.
-3. Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to Meta-Analysis. 2nd ed. Wiley; 2021.
+1. Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to Meta-Analysis. 2nd ed. Wiley; 2021.
+2. Higgins JPT, Thompson SG, Deeks JJ, Altman DG. Measuring inconsistency in meta-analyses. BMJ. 2003;327(7414):557-560.
+3. Cochrane Handbook for Systematic Reviews of Interventions. Version 6.4. Cochrane; 2023.
 
 AI Disclosure
 
-This work represents a compiler-generated evidence micro-publication (i.e., a structured, pipeline-based synthesis output). AI is used as a constrained synthesis engine operating on structured inputs and predefined rules, rather than as an autonomous author. Deterministic components of the pipeline, together with versioned, reproducible evidence capsules (TruthCert), are designed to support transparent and auditable outputs. All results and text were reviewed and verified by the author, who takes full responsibility for the content. The workflow operationalises key transparency and reporting principles consistent with CONSORT-AI/SPIRIT-AI, including explicit input specification, predefined schemas, logged human-AI interaction, and reproducible outputs.
+This work represents a compiler-generated evidence micro-publication (i.e., a structured, pipeline-based synthesis output). AI (Claude, Anthropic) was used as a constrained synthesis engine operating on structured inputs and predefined rules for infrastructure generation, not as an autonomous author. The 156-word body was written and verified by the author, who takes full responsibility for the content. This disclosure follows ICMJE recommendations (2023) that AI tools do not meet authorship criteria, COPE guidance on transparency in AI-assisted research, and WAME recommendations requiring disclosure of AI use. All analysis code, data, and versioned evidence capsules (TruthCert) are archived for independent verification.
 

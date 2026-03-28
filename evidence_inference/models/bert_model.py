@@ -2,8 +2,8 @@
 from os.path import join, dirname, abspath
 import sys
 
-# this monstrosity produces the module directory in an environment where this is unpacked
-sys.path.insert(0, abspath(join(dirname(abspath(__file__)), '..', '..')))
+# Requires package installation
+# sys.path.insert(0, abspath(join(dirname(abspath(__file__)), '..', '..')))
 
 from typing import Any, List, Optional
 

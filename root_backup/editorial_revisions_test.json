@@ -1,0 +1,103 @@
+{
+  "passed": 24,
+  "total": 24,
+  "pass_rate": 100.0,
+  "results": [
+    {
+      "test": "MATHEMATICAL_FORMULAE object exists",
+      "passed": true
+    },
+    {
+      "test": "Has tau2DL formula",
+      "passed": true
+    },
+    {
+      "test": "Has tau2REML formula",
+      "passed": true
+    },
+    {
+      "test": "showMathematicalAppendix function exists",
+      "passed": true
+    },
+    {
+      "test": "Formulae modal opens",
+      "passed": true
+    },
+    {
+      "test": "CITATIONS object exists",
+      "passed": true
+    },
+    {
+      "test": "Has DerSimonian citation",
+      "passed": true
+    },
+    {
+      "test": "Has multiple citations",
+      "passed": true
+    },
+    {
+      "test": "showCitationsList function exists",
+      "passed": true
+    },
+    {
+      "test": "Citations modal opens",
+      "passed": true
+    },
+    {
+      "test": "CAUSAL_ASSUMPTIONS object exists",
+      "passed": true
+    },
+    {
+      "test": "Has propensityScore assumptions",
+      "passed": true
+    },
+    {
+      "test": "Has multiple causal methods",
+      "passed": true
+    },
+    {
+      "test": "showCausalAssumptions function exists",
+      "passed": true
+    },
+    {
+      "test": "Assumptions modal opens",
+      "passed": true
+    },
+    {
+      "test": "showModelDiagnostics function exists",
+      "passed": true
+    },
+    {
+      "test": "drawResidualPlot function exists",
+      "passed": true
+    },
+    {
+      "test": "drawQQPlot function exists",
+      "passed": true
+    },
+    {
+      "test": "drawInfluenceDiagnostics function exists",
+      "passed": true
+    },
+    {
+      "test": "Diagnostics modal opens",
+      "passed": true
+    },
+    {
+      "test": "Formulae button exists",
+      "passed": true
+    },
+    {
+      "test": "References button exists",
+      "passed": true
+    },
+    {
+      "test": "Assumptions button exists",
+      "passed": true
+    },
+    {
+      "test": "Diagnostics button exists",
+      "passed": true
+    }
+  ]
+}

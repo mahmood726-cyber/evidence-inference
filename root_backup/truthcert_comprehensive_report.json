@@ -1,0 +1,127 @@
+{
+  "demo_load": true,
+  "analysis_run": true,
+  "tabs": {
+    "analysis": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "effect"
+      ],
+      "plots": 0,
+      "tables": 0,
+      "result_elements": 1
+    },
+    "heterogeneity": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "tau",
+        "Q",
+        "heterogeneity"
+      ],
+      "plots": 0,
+      "tables": 0,
+      "result_elements": 2
+    },
+    "bias": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "egger",
+        "funnel",
+        "bias",
+        "trim"
+      ],
+      "plots": 0,
+      "tables": 0,
+      "result_elements": 2
+    },
+    "validation": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "valid",
+        "test"
+      ],
+      "plots": 0,
+      "tables": 3,
+      "result_elements": 1
+    },
+    "verdict": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "verdict",
+        "threat"
+      ],
+      "plots": 0,
+      "tables": 0,
+      "result_elements": 1
+    },
+    "report": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "report"
+      ],
+      "plots": 0,
+      "tables": 0,
+      "result_elements": 1
+    },
+    "clinical": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "clinical",
+        "nnt",
+        "risk"
+      ],
+      "plots": 0,
+      "tables": 0,
+      "result_elements": 1
+    },
+    "hta": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "hta",
+        "economic"
+      ],
+      "plots": 0,
+      "tables": 0,
+      "result_elements": 1
+    },
+    "advanced": {
+      "accessible": true,
+      "has_content": true,
+      "keywords_found": [
+        "advanced",
+        "sensitivity",
+        "model"
+      ],
+      "plots": 0,
+      "tables": 0,
+      "result_elements": 29
+    }
+  },
+  "plots": {
+    "analysis": {
+      "has_plot": false,
+      "plot_count": 0,
+      "has_data": false
+    },
+    "heterogeneity": {
+      "has_plot": false,
+      "plot_count": 0,
+      "has_data": false
+    },
+    "bias": {
+      "has_plot": false,
+      "plot_count": 0,
+      "has_data": false
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

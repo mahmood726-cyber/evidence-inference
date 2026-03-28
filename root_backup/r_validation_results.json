@@ -1,0 +1,134 @@
+{
+  "stats_mean": {
+    "r_value": 3,
+    "expected": 3
+  },
+  "stats_sd": {
+    "r_value": 1.5811,
+    "expected": 1.5811
+  },
+  "stats_pnorm": {
+    "r_value": 0.975,
+    "expected": 0.975
+  },
+  "stats_qnorm": {
+    "r_value": 1.96,
+    "expected": 1.96
+  },
+  "stats_pchisq": {
+    "r_value": 0.95,
+    "expected": 0.95
+  },
+  "stats_pt": {
+    "r_value": 0.9633,
+    "expected": 0.963
+  },
+  "meta_pooled": {
+    "r_value": 0.4414,
+    "se": 0.0493
+  },
+  "meta_tau2": {
+    "r_value": 0.0044
+  },
+  "meta_I2": {
+    "r_value": 18.3015
+  },
+  "meta_Q": {
+    "r_value": 11.8785,
+    "df": 9,
+    "pval": 0.2202
+  },
+  "meta_fixed": {
+    "r_value": 0.4358,
+    "se": 0.0438
+  },
+  "egger": {
+    "intercept": 0.0676,
+    "se": {},
+    "z": 2.045,
+    "pvalue": 0.0751
+  },
+  "begg": {
+    "tau": 0.5111,
+    "pvalue": 0.0466
+  },
+  "trimfill": {
+    "k0": 2,
+    "adjusted_effect": 0.4072,
+    "adjusted_se": 0.052
+  },
+  "pet": {
+    "intercept": 0.0432,
+    "slope": 2.9041
+  },
+  "peese": {
+    "intercept": 0.2427,
+    "slope": 10.017
+  },
+  "prediction_interval": {
+    "lower": 0.2509,
+    "upper": 0.632
+  },
+  "H_statistic": {
+    "value": 1.1488
+  },
+  "studentized_residuals": {
+    "values": [0.4523, -0.8891, 1.8459, -2.1107, 0.8566, -0.2876, 1.1687, -0.7315, 0.6373, 0.0296]
+  },
+  "cooks_d": {
+    "values": [0.0197, 0.1106, 0.2248, 0.3844, 0.0524, 0.0338, 0.0738, 0.1475, 0.0298, 0.0053]
+  },
+  "dfbetas": {
+    "values": []
+  },
+  "leave_one_out": {
+    "estimates": [0.4345, 0.4578, 0.418, 0.472, 0.4301, 0.4505, 0.428, 0.4604, 0.4329, 0.445],
+    "se": [0.0577, 0.0538, 0.0459, 0.047, 0.051, 0.0563, 0.0492, 0.0569, 0.0527, 0.057]
+  },
+  "peters": {
+    "z": -1.2256,
+    "pvalue": 0.3078
+  },
+  "cumulative": {
+    "estimates": [0.5, 0.4312, 0.5042, 0.4237, 0.4502, 0.436, 0.4597, 0.4358, 0.445, 0.4414],
+    "se": [0.1, 0.095, 0.1173, 0.1154, 0.0982, 0.0777, 0.0755, 0.0621, 0.057, 0.0493]
+  },
+  "nma_fixed": {
+    "AB": 0.3246,
+    "AC": 0.5384,
+    "BC": 0.2138
+  },
+  "nma_random": {
+    "AB": 0.3246,
+    "AC": 0.5384,
+    "BC": 0.2138
+  },
+  "nma_tau2": {
+    "value": 0
+  },
+  "nma_I2": {
+    "value": 0
+  },
+  "p_scores": {
+    "values": [
+      ["NA", 0.791, 0.4596],
+      [0.791, "NA", 0.7494],
+      [0.4596, 0.7494, "NA"]
+    ]
+  },
+  "node_split": {
+    "comparisons": ["1", "2", "3"],
+    "direct": [-0.3308, -0.5224, 0.2212],
+    "indirect": [-0.3012, -0.5519, 0.1916],
+    "pvalues": [0.8709, 0.8709, 0.8709]
+  },
+  "metadata": {
+    "generated": "2026-01-12 10:32:51",
+    "r_version": "R version 4.5.2 (2025-10-31 ucrt)",
+    "packages": {
+      "metafor": "4.8.0",
+      "netmeta": "3.2.0",
+      "meta": "8.2.1"
+    }
+  }
+}

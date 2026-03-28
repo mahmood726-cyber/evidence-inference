@@ -1,0 +1,755 @@
+{
+  "datasets": [
+    {
+      "name": "SGLT2_CV_DEATH_HFPEF - Load",
+      "passed": true,
+      "details": "2 studies"
+    },
+    {
+      "name": "SGLT2_CV_DEATH_HFPEF - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "SGLT2_CV_DEATH_HFPEF - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "SGLT2_ACM - Load",
+      "passed": true,
+      "details": "5 studies"
+    },
+    {
+      "name": "SGLT2_ACM - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "SGLT2_ACM - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "SGLT2_HFH - Load",
+      "passed": true,
+      "details": "4 studies"
+    },
+    {
+      "name": "SGLT2_HFH - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "SGLT2_HFH - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "PSYCH_INTERVENTION - Load",
+      "passed": true,
+      "details": "4 studies"
+    },
+    {
+      "name": "PSYCH_INTERVENTION - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "PSYCH_INTERVENTION - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BCG - Load",
+      "passed": true,
+      "details": "6 studies"
+    },
+    {
+      "name": "BCG - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BCG - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "ASPIRIN_CVD - Load",
+      "passed": true,
+      "details": "5 studies"
+    },
+    {
+      "name": "ASPIRIN_CVD - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "ASPIRIN_CVD - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BP_REDUCTION - Load",
+      "passed": true,
+      "details": "5 studies"
+    },
+    {
+      "name": "BP_REDUCTION - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BP_REDUCTION - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "MORTALITY_RATE - Load",
+      "passed": true,
+      "details": "6 studies"
+    },
+    {
+      "name": "MORTALITY_RATE - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "MORTALITY_RATE - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BCG_SUBGROUPS - Load",
+      "passed": true,
+      "details": "6 studies"
+    },
+    {
+      "name": "BCG_SUBGROUPS - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BCG_SUBGROUPS - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "SGLT2_HR - Load",
+      "passed": true,
+      "details": "5 studies"
+    },
+    {
+      "name": "SGLT2_HR - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "SGLT2_HR - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "MULTI_OUTCOME - Load",
+      "passed": true,
+      "details": "12 studies"
+    },
+    {
+      "name": "MULTI_OUTCOME - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "MULTI_OUTCOME - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BINARY_RR - Load",
+      "passed": true,
+      "details": "6 studies"
+    },
+    {
+      "name": "BINARY_RR - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BINARY_RR - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BINARY_RD - Load",
+      "passed": true,
+      "details": "8 studies"
+    },
+    {
+      "name": "BINARY_RD - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "BINARY_RD - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "CONTINUOUS_SMD - Load",
+      "passed": true,
+      "details": "10 studies"
+    },
+    {
+      "name": "CONTINUOUS_SMD - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "CONTINUOUS_SMD - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "GENERIC_EFFECTS - Load",
+      "passed": true,
+      "details": "10 studies"
+    },
+    {
+      "name": "GENERIC_EFFECTS - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "GENERIC_EFFECTS - Full Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "METAREG_DOSE - Load",
+      "passed": true,
+      "details": "10 studies"
+    },
+    {
+      "name": "METAREG_DOSE - Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "METAREG_DOSE - Full Analysis",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Data Input tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Analysis Results tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Decision-Driven MA tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Heterogeneity tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Publication Bias tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Clinical Utility tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Multi-Outcome tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Demo Datasets tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Validation tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Cross-Disciplinary tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "R Code Export tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "TruthCert Verdict tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "HTA Economic tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Advanced Methods tab",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Report tab",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Page loads correctly",
+      "passed": true,
+      "details": "TruthCert-PairwisePro v1.0 | Evidence Synthesis & HTA Platform"
+    },
+    {
+      "name": "Run Analysis button",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Add Study button",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Clear All button",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Export CSV button",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "KM Import button",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "plots": [
+    {
+      "name": "Forest Plot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Funnel Plot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Baujat Plot",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "functions": [
+    {
+      "name": "Core: Pooled Estimate",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Core: Tau2 Estimation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Core: Heterogeneity Stats",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Core: Knapp-Hartung",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Effect: Log Odds Ratio",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Effect: Log Risk Ratio",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Effect: Risk Difference",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Effect: Standardized Mean Diff",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Effect: Mean Difference",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: Egger Test",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: Begg Test",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: Trim and Fill",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: Fail-safe N",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: PET-PEESE",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: Peters Test",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: Harbord Test",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: Copas Model",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Bias: TES",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Influence: Cook Distance",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Influence: Leave-One-Out",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Influence: Baujat Data",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Fixed: Mantel-Haenszel",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Fixed: Peto Method",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Advanced: Meta-Regression",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Advanced: Subgroup Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Advanced: Cumulative MA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Advanced: Three-Level MA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Advanced: Bayesian MA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Advanced: Fragility Index",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Gap: GLMM Meta-Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Gap: Beta-Binomial MA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Gap: Network MA Consistency",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Gap: Side-Splitting Test",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Gap: Net Heat Plot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Gap: Profile Likelihood",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Gap: LR Test",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: RoBMA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Multiverse",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Improved PI",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Sequential MA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: P-Uniform*",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: VOI",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Albatross Plot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Sunset Plot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Drapery Plot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Harvest Plot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: DCA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Threshold NNT",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Permutation I2",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Limit MA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: WAAP-WLS",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: MCDA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Spec Curve",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Vibration",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Living Review",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: 3PSM",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Innovative: Robust Tau2",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "analyses": [
+    {
+      "name": "GOSH Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Trial Sequential Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "P-Curve Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Z-Curve Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Influence Diagnostics",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Copas Selection Model",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "GRADE Assessment",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Small Sample CI",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Extended Validation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "HTA Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Verdict Generation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Execute: Mantel-Haenszel OR",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Execute: Peto Method",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Execute: Cook Distance",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Execute: Egger Test",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Execute: Leave-One-Out",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Execute: GLMM Analysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Execute: Profile Likelihood",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Execute: RoBMA",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "errors": []
+}

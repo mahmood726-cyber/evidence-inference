@@ -1,0 +1,5 @@
+library(metafor)
+data(dat.bcg)
+d <- escalc(measure='RR', ai=tpos, bi=tneg, ci=cpos, di=cneg, data=dat.bcg)
+cat('EB:', rma(d$yi, d$vi, method='EB')$tau2, '\n')
+cat('PM:', rma(d$yi, d$vi, method='PM')$tau2, '\n')

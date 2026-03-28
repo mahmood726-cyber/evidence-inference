@@ -1,0 +1,590 @@
+{
+  "tabs": [
+    {
+      "name": "data",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "analysis",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ddma",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "heterogeneity",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "bias",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "clinical",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "multioutcome",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "demos",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "validation",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "crossdisciplinary",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "code",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "verdict",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "hta",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "advanced",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "report",
+      "method": "data-tab",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcca\nData",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcc8\nAnalysis",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83c\udfaf\nDDMA",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcc9\nHeterogeneity",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udd0d\nBias",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udc8a\nClinical",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83c\udfaf\nMulti-Outcome",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcda\nDemos",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\u2713\nValidation",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udd2c\nCross-Disc",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcbb\nCode",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83c\udfdb\ufe0f\nVerdict",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcb0\nHTA",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udd2c\nAdvanced",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcdd\nReport",
+      "method": "class",
+      "clicked": true,
+      "status": "PASS"
+    },
+    {
+      "name": "\n                      const d",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "\n                      const d",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "switchCalcTab('convert')",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "switchCalcTab('compute')",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "switchCalcTab('table')",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "goToTab('analysis')",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "goToTab('heterogeneity')",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "goToTab('bias')",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "goToTab('ddma')",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    },
+    {
+      "name": "goToTab('report')",
+      "method": "onclick",
+      "clicked": false,
+      "status": "FAIL",
+      "error": "Message: element not interactable\n  (Session info: MicrosoftEdge=143.0.3650.96); For documentation o"
+    }
+  ],
+  "buttons": [
+    {
+      "name": "\u2139\ufe0f Cite",
+      "status": "PASS"
+    },
+    {
+      "name": "\u25b6\nRun Analysis",
+      "status": "PASS"
+    },
+    {
+      "name": "\u25b6\nRun Analysis",
+      "status": "FAIL",
+      "error": "Alert Text: At least 2 valid studies are required for meta-analysis.\nMessage: unexpected alert open:"
+    },
+    {
+      "name": "\ud83c\udf19",
+      "status": "PASS"
+    },
+    {
+      "name": "?\nHelp",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcca\nData",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcc8\nAnalysis",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83c\udfaf\nDDMA",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcc9\nHeterogeneity",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udd0d\nBias",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udc8a\nClinical",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83c\udfaf\nMulti-Outcome",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcda\nDemos",
+      "status": "PASS"
+    },
+    {
+      "name": "\u2713\nValidation",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udd2c\nCross-Disc",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcbb\nCode",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83c\udfdb\ufe0f\nVerdict",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcb0\nHTA",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udd2c\nAdvanced",
+      "status": "PASS"
+    },
+    {
+      "name": "\ud83d\udcdd\nReport",
+      "status": "PASS"
+    },
+    {
+      "name": "\u00d7",
+      "status": "PASS"
+    }
+  ],
+  "functions": [
+    {
+      "test": "pnorm(0)",
+      "expected": 0.5,
+      "actual": "0.5000000005",
+      "status": "PASS"
+    },
+    {
+      "test": "pnorm(1.96)",
+      "expected": 0.975,
+      "actual": "0.9750021738917761",
+      "status": "PASS"
+    },
+    {
+      "test": "qnorm(0.975)",
+      "expected": 1.96,
+      "actual": "1.959963986120195",
+      "status": "PASS"
+    },
+    {
+      "test": "pt(2, 10)",
+      "expected": null,
+      "actual": "0.9633059826146297",
+      "status": "PASS"
+    },
+    {
+      "test": "qt(0.975, 10)",
+      "expected": null,
+      "actual": "2.228138851986274",
+      "status": "PASS"
+    },
+    {
+      "test": "calculateLogOR(10, 90, 20, 80)",
+      "expected": null,
+      "actual": "{'vi': 0.17361111111111113, 'yi': -0.8109302162163",
+      "status": "PASS"
+    },
+    {
+      "test": "calculateLogRR(10, 100, 20, 100)",
+      "expected": null,
+      "actual": "{'vi': 0.13257575757575757, 'yi': -0.6061358035703",
+      "status": "PASS"
+    },
+    {
+      "test": "calculatePooledEstimate([-0.5, -0.3, -0.4], [0.1, 0.1, 0.1], 'FE')",
+      "expected": null,
+      "actual": "{'ci_lower': None, 'ci_upper': None, 'p_value': No",
+      "status": "PASS"
+    },
+    {
+      "test": "calculatePooledEstimate([-0.5, -0.3, -0.4], [0.1, 0.1, 0.1], 'DL')",
+      "expected": null,
+      "actual": "{'ci_lower': None, 'ci_upper': None, 'p_value': No",
+      "status": "PASS"
+    },
+    {
+      "test": "estimateTau2_DL([-0.5, -0.3, -0.4], [0.1, 0.1, 0.1])",
+      "expected": null,
+      "actual": "{'C': 20, 'Q': 0.2, 'converged': True, 'df': 2, 'm",
+      "status": "PASS"
+    },
+    {
+      "test": "estimateTau2_REML([-0.5, -0.3, -0.4, -0.6, -0.2], [0.1, 0.1, 0.1, 0.1, 0.1])",
+      "expected": null,
+      "actual": "{'converged': True, 'iterations': 2, 'loglik': 3.3",
+      "status": "PASS"
+    },
+    {
+      "test": "eggerTest([-0.5, -0.3, -0.4, -0.6, -0.2], [0.1, 0.1, 0.1, 0.1, 0.1])",
+      "expected": null,
+      "actual": "{'df': 3, 'intercept': None, 'interpretation': 'No",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof betainc",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof gammainc",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof threeLevelMetaAnalysis",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof doseResponseMetaAnalysis",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof bivariateMetaAnalysis",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof petPeese",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof copasSelectionModel",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof assessROB2",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof assessROBINS_I",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof generatePRISMAReport",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof runExtendedValidation",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof runAdvancedValidation",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof validateThreeLevelMA",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof validateDoseResponseMA",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof validateROB2",
+      "expected": "'function'",
+      "actual": "function",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof METHODS_APPENDIX",
+      "expected": "'object'",
+      "actual": "object",
+      "status": "PASS"
+    },
+    {
+      "test": "typeof EXTENDED_VALIDATION_DATA",
+      "expected": "'object'",
+      "actual": "object",
+      "status": "PASS"
+    },
+    {
+      "test": "runExtendedValidation()",
+      "status": "PASS",
+      "result": "{'all_passed': 1, 'all_total': 6, 'conclusion': 'Some tests failed. Review detailed results.', 'core_passed': 0, 'core_total': 3, 'extended_passed': 1, 'extended_total': 3}"
+    },
+    {
+      "test": "runAdvancedValidation()",
+      "status": "PASS",
+      "result": "{'failed': 2, 'passed': 1, 'percentage': '33.3%', 'total': 3}"
+    },
+    {
+      "test": "Full analysis workflow",
+      "status": "PASS",
+      "result": "{'egger': {'df': 6, 'intercept': -1.372539260373471, 'interpretation': 'Evidence of asymmetry (possible publication bias)', 'method': \"Egger's regression test\", 'p_value': 0.046169254364936574, 'se': "
+    }
+  ],
+  "plots": [
+    {
+      "name": "Forest Plot",
+      "function": "renderForestPlot",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Funnel Plot",
+      "function": "renderFunnelPlot",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Baujat Plot",
+      "function": "renderBaujatPlot",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Galbraith Plot",
+      "function": "renderGalbraithPlot",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "name": "DOI Plot",
+      "function": "renderDoiPlot",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Influence Plot",
+      "function": "renderInfluencePlot",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Cumulative Plot",
+      "function": "renderCumulativePlot",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ROB Traffic Light",
+      "function": "renderROB2TrafficLight",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "name": "PRISMA Diagram",
+      "function": "renderPRISMADiagram",
+      "exists": true,
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console_errors": []
+}

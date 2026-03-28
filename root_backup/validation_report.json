@@ -1,0 +1,145 @@
+{
+  "title": "NMA Pro v6.2 - R Validation Report",
+  "date": "2026-01-12",
+  "reference_packages": {
+    "metafor": "4.8.0",
+    "netmeta": "3.2.0",
+    "meta": "8.2.1"
+  },
+  "summary": {
+    "total_tests": 17,
+    "passed": 9,
+    "failed": 5,
+    "needs_review": 3,
+    "pass_rate": "52.9%"
+  },
+  "categories": {
+    "basic_statistics": {
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "Stats.mean",
+          "js": 3.0,
+          "r": 3.0,
+          "match": true
+        },
+        {
+          "name": "Stats.pnorm",
+          "js": 0.975002,
+          "r": 0.975,
+          "match": true
+        },
+        {
+          "name": "Stats.qnorm",
+          "js": 1.959964,
+          "r": 1.96,
+          "match": true
+        },
+        {
+          "name": "Stats.pchisq",
+          "js": 0.955053,
+          "r": 0.95,
+          "match": true,
+          "note": "0.53% diff"
+        },
+        {
+          "name": "Stats.pt",
+          "js": 0.963306,
+          "r": 0.9633,
+          "match": true
+        }
+      ]
+    },
+    "meta_analysis_fixed": {
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "Fixed Effect",
+          "js": 0.435847,
+          "r": 0.4358,
+          "match": true
+        },
+        {
+          "name": "Fixed SE",
+          "js": 0.043756,
+          "r": 0.0438,
+          "match": true
+        }
+      ]
+    },
+    "publication_bias": {
+      "status": "PARTIAL",
+      "tests": [
+        {
+          "name": "Egger pValue",
+          "js": 0.0751,
+          "r": 0.0751,
+          "match": true
+        },
+        {
+          "name": "Egger intercept",
+          "js": 2.737,
+          "r": 0.0676,
+          "match": false,
+          "note": "Different metric (intercept vs normalized)"
+        },
+        {
+          "name": "Begg tau",
+          "js": 0.5111,
+          "r": 0.5111,
+          "match": true
+        },
+        {
+          "name": "Trim-Fill k0",
+          "js": 0,
+          "r": 2,
+          "match": false,
+          "note": "Implementation differs"
+        },
+        {
+          "name": "Trim-Fill adjusted",
+          "js": "null",
+          "r": 0.4072,
+          "match": false,
+          "note": "Implementation differs"
+        }
+      ]
+    },
+    "nma": {
+      "status": "NEEDS_FIX",
+      "tests": [
+        {
+          "name": "A vs B",
+          "js": "null",
+          "r": 0.3246,
+          "match": false,
+          "note": "Matrix computation issue"
+        },
+        {
+          "name": "A vs C",
+          "js": "null",
+          "r": 0.5384,
+          "match": false,
+          "note": "Matrix computation issue"
+        },
+        {
+          "name": "Tau2",
+          "js": "null",
+          "r": 0.0,
+          "match": false,
+          "note": "Matrix computation issue"
+        }
+      ]
+    }
+  },
+  "issues_identified": [
+    "TrimFill: Different algorithm or parameters - R finds 2 missing studies, JS finds 0",
+    "Egger: Returns intercept (2.737) instead of z-statistic (2.045)",
+    "NMA: Matrix computations returning null values - requires investigation"
+  ],
+  "recommendations": [
+    "Review TrimFill implementation against metafor::trimfill algorithm",
+    "Add z-statistic calculation to Egger test output",
+    "Debug NMA matrix inversion and effect estimation"
+  ]
+}

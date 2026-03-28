@@ -10,8 +10,8 @@ np.random.seed(896)
 from os.path import join, dirname, abspath
 import sys
 
-# this monstrosity produces the module directory in an environment where this is unpacked
-sys.path.insert(0, abspath(join(dirname(abspath(__file__)), '..', '..')))
+# Requires package installation
+# sys.path.insert(0, abspath(join(dirname(abspath(__file__)), '..', '..')))
 
 from sklearn.feature_extraction.text import CountVectorizer
 from evidence_inference.preprocess.sentence_split import find_span_location, split_into_sentences, gen_exact_evid_array

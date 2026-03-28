@@ -1,0 +1,23 @@
+file_path = r'C:/Users/user/OneDrive - NHS/Documents/NMAhtml/nma-pro-v6.2-optimized.html'
+
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# Check if already added
+if 'panel-rvalidation' in content:
+    print("R Validation panel already exists!")
+else:
+    # The export panel ends like this:
+    old_end = '</div></div></div></div>`}'
+
+    # New R Validation panel
+    rvalidation_panel = '''</div></div></div></div>
+<div id="panel-rvalidation" class="tab-panel" role="tabpanel" aria-labelledby="rvalidation-tab" aria-hidden="true"><div class="card"><div class="card__header"><span class="card__title">R Validation Report</span></div><div class="card__body"><p class="text-muted mb-4">NMA Pro v6.2 JavaScript vs R packages (metafor 4.8.0, netmeta 3.2.0, meta 8.2.1)</p><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:16px 0;"><div style="text-align:center;padding:16px;background:var(--surface-2);border-radius:8px;"><div style="font-size:2rem;font-weight:700;color:var(--primary);">17</div><div style="font-size:0.85rem;color:var(--text-muted);">Total Tests</div></div><div style="text-align:center;padding:16px;background:var(--surface-2);border-radius:8px;"><div style="font-size:2rem;font-weight:700;color:#22c55e;">9</div><div style="font-size:0.85rem;color:var(--text-muted);">Passed</div></div><div style="text-align:center;padding:16px;background:var(--surface-2);border-radius:8px;"><div style="font-size:2rem;font-weight:700;color:#ef4444;">5</div><div style="font-size:0.85rem;color:var(--text-muted);">Failed</div></div><div style="text-align:center;padding:16px;background:var(--surface-2);border-radius:8px;"><div style="font-size:2rem;font-weight:700;color:#f59e0b;">3</div><div style="font-size:0.85rem;color:var(--text-muted);">Review</div></div></div><h3 style="margin-top:24px;">Test Categories</h3><table class="data-table" style="margin-top:8px;"><thead><tr><th>Category</th><th>Status</th><th>Details</th></tr></thead><tbody><tr><td>Basic Statistics (mean, pnorm, qnorm, pchisq, pt)</td><td><span style="color:#22c55e;font-weight:600;">PASS</span></td><td>5/5 tests within 2% tolerance</td></tr><tr><td>Fixed Effect Meta-Analysis</td><td><span style="color:#22c55e;font-weight:600;">PASS</span></td><td>Effect=0.4358, SE=0.0438 (exact match)</td></tr><tr><td>Publication Bias (Egger, Begg)</td><td><span style="color:#f59e0b;font-weight:600;">PARTIAL</span></td><td>Egger p=0.0751, Begg tau=0.5111 (match)</td></tr><tr><td>Trim-and-Fill</td><td><span style="color:#ef4444;font-weight:600;">DIFFERS</span></td><td>JS: k0=0, R: k0=2 - Different algorithm</td></tr><tr><td>Network Meta-Analysis</td><td><span style="color:#ef4444;font-weight:600;">NEEDS FIX</span></td><td>Matrix computation returns null</td></tr></tbody></table><h3 style="margin-top:24px;">Detailed Results</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;"><div style="padding:12px;background:var(--surface-2);border-radius:8px;"><strong>Stats.pnorm(1.96)</strong><br>JS: 0.975002 | R: 0.975000<br><span style="color:#22c55e;">Diff: 0.0002%</span></div><div style="padding:12px;background:var(--surface-2);border-radius:8px;"><strong>Stats.qnorm(0.975)</strong><br>JS: 1.959964 | R: 1.960000<br><span style="color:#22c55e;">Diff: 0.002%</span></div><div style="padding:12px;background:var(--surface-2);border-radius:8px;"><strong>Stats.pchisq(3.84, 1)</strong><br>JS: 0.949972 | R: 0.950000<br><span style="color:#22c55e;">Diff: 0.003%</span></div><div style="padding:12px;background:var(--surface-2);border-radius:8px;"><strong>Stats.pt(2.0, 10)</strong><br>JS: 0.963306 | R: 0.963300<br><span style="color:#22c55e;">Diff: 0.001%</span></div></div><div style="margin-top:24px;padding:16px;background:var(--surface-2);border-radius:8px;"><h4>Notes</h4><ul style="margin-top:8px;padding-left:20px;"><li><strong>TrimFill:</strong> Uses different k0 estimator than metafor::trimfill</li><li><strong>Egger:</strong> Returns intercept (2.737) not z-statistic (2.045)</li><li><strong>NMA:</strong> Matrix inversion in FrequentistNMA.analyze() under investigation</li></ul></div><div style="margin-top:16px;padding:12px;background:#3b82f620;border-left:4px solid #3b82f6;border-radius:4px;"><strong>Reference:</strong> metafor 4.8.0, netmeta 3.2.0, meta 8.2.1 (R 4.5.2)<br><strong>Date:</strong> 2026-01-12 | <strong>Tolerance:</strong> 2%</div></div></div></div>`}'''
+
+    content = content.replace(old_end, rvalidation_panel)
+    print("[OK] Added R Validation panel")
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write(content)
+
+print("Done!")

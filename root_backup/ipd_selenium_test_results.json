@@ -1,0 +1,386 @@
+{
+  "timestamp": "2026-01-11T08:55:49.837747",
+  "summary": {
+    "total": 75,
+    "passed": 72,
+    "failed": 3,
+    "pass_rate": 96.0
+  },
+  "tests": [
+    {
+      "test": "App Load",
+      "passed": true,
+      "details": "Title: IPD Meta-Analysis Pro - Advanced IPD Meta-Analysis Tool"
+    },
+    {
+      "test": "Logo present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Theme toggle present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Export button present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Help button present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Navigation tabs present (11 tabs)",
+      "passed": true,
+      "details": "Found 11 tabs"
+    },
+    {
+      "test": "Drop zone present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Example data buttons present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Theme toggle works",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Load Lung Cancer dataset",
+      "passed": true,
+      "details": "1098 patients"
+    },
+    {
+      "test": "Load SGLT2 dataset",
+      "passed": true,
+      "details": "9905 patients"
+    },
+    {
+      "test": "Load Depression dataset",
+      "passed": true,
+      "details": "380 patients"
+    },
+    {
+      "test": "Run analysis",
+      "passed": true,
+      "details": "Effect: 0.66, CI: 0.49-0.88, I2: 56.3%"
+    },
+    {
+      "test": "Tab: Data",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Covariates",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Guardian",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Network",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Results",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Ranking",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Heterogeneity",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Consistency",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Bayesian",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Pub Bias",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tab: Meta-Reg",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Help modal opens",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Help tabs present (4)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Export modal opens",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Export options present (9)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Bayesian controls present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Bayesian analysis runs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Egger's test results",
+      "passed": true,
+      "details": "Z=-0.18, p=0.858"
+    },
+    {
+      "test": "Begg's test results",
+      "passed": true,
+      "details": "Z=-0.14"
+    },
+    {
+      "test": "P-Curve button present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "P-Curve analysis runs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Excess Significance button present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Meta-regression controls present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Meta-regression runs",
+      "passed": true,
+      "details": "R2=6.9%"
+    },
+    {
+      "test": "Network statistics present",
+      "passed": true,
+      "details": "Nodes=4, Edges=6"
+    },
+    {
+      "test": "Network plot canvas present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Advanced features menu opens",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Advanced features available (42)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Power calculator opens",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Power calculator tabs (3)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Power calculation runs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "exportSensitivityAnalysis function exists",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "generatePRISMAFlowchart function exists",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "runIntegratedTestSuite function exists",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Integrated test suite runs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Test suite results shown",
+      "passed": true,
+      "details": "Passed: 19, Failed: 4"
+    },
+    {
+      "test": "initTooltips function exists",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "TOOLTIPS object exists",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Tooltip elements present (70)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "GRADE button present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "GRADE assessment runs",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "test": "MASEM button present",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "test": "Heterogeneity statistics",
+      "passed": true,
+      "details": "I2=56.3%, tau2=0.1094, Q=25.19 (p=0.009)"
+    },
+    {
+      "test": "Heterogeneity plots present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Ranking table present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Ranking plots present",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: runAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: runBayesian",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: runMetaRegression",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: runNetworkMetaAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: exportAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: showAdvancedFeaturesMenu",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: showPowerCalculator",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: exportSensitivityAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: generatePRISMAFlowchart",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: runPCurveAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: runExcessSignificanceTest",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: runIntegratedTestSuite",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: initTooltips",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "Function: showEnhancedExportModal",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "MathUtils.normCDF(0) \u2248 0.5",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "test": "MathUtils.normCDF(0) \u2248 0.5",
+      "passed": false,
+      "details": "'charmap' codec can't encode character '\\u2248' in position 30: character maps to <undefined>"
+    }
+  ]
+}

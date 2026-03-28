@@ -1,0 +1,29 @@
+{
+  "passed": [
+    "Load Demo Button",
+    "Study table",
+    "Effect Measure Selector",
+    "Run Analysis",
+    "Network Graph",
+    "Forest Plot",
+    "League Table",
+    "Rankogram",
+    "Funnel Plot",
+    "Theme Toggle"
+  ],
+  "failed": [
+    "Tau2",
+    "I2",
+    "Consistency Table",
+    "Covariate Selector",
+    "CINeMA Button",
+    "R Validation"
+  ],
+  "skipped": [
+    "Ranking Table",
+    "LOO Button",
+    "Cumulative Button",
+    "Export JSON",
+    "Export R"
+  ]
+}

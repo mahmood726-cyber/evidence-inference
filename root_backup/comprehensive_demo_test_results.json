@@ -1,0 +1,98 @@
+{
+  "demos_tested": 17,
+  "demos_passed": 0,
+  "demos_failed": 17,
+  "functions_tested": 54,
+  "functions_passed": 54,
+  "functions_failed": 0,
+  "plots_tested": 8,
+  "plots_passed": 7,
+  "plots_failed": 1,
+  "details": [
+    {
+      "demo": "SGLT2_CV_DEATH_HFPEF",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "SGLT2_ACM",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "SGLT2_HFH",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "PSYCH_INTERVENTION",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "BCG",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "ASPIRIN_CVD",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "BP_REDUCTION",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "MORTALITY_RATE",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "BCG_SUBGROUPS",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "SGLT2_HR",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "MULTI_OUTCOME",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "BINARY_RR",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "BINARY_RD",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "CONTINUOUS_SMD",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "GENERIC_EFFECTS",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "METAREG_DOSE",
+      "status": "ERROR",
+      "reason": "Invalid format specifier '.4f if pooled else 'N/A'' for object of type 'float'"
+    },
+    {
+      "demo": "DTA_DIAGNOSTIC",
+      "status": "FAIL",
+      "reason": "No results"
+    }
+  ]
+}

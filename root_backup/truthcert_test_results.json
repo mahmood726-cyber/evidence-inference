@@ -1,0 +1,480 @@
+{
+  "start_time": "2026-01-13T13:08:26.786867",
+  "end_time": "2026-01-13T13:10:33.986073",
+  "total_tests": 101,
+  "passed": 101,
+  "failed": 0,
+  "errors": [],
+  "sections": {
+    "App Load": {
+      "passed": 4,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Page title",
+          "passed": true
+        },
+        {
+          "name": "Header present",
+          "passed": true
+        },
+        {
+          "name": "Tabs present",
+          "passed": true
+        },
+        {
+          "name": "Run Analysis button",
+          "passed": true
+        }
+      ]
+    },
+    "Demo Datasets": {
+      "passed": 48,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Load SGLT2_CV_DEATH_HFPEF",
+          "passed": true
+        },
+        {
+          "name": "SGLT2_CV_DEATH_HFPEF analysis",
+          "passed": true
+        },
+        {
+          "name": "SGLT2_CV_DEATH_HFPEF full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load SGLT2_ACM",
+          "passed": true
+        },
+        {
+          "name": "SGLT2_ACM analysis",
+          "passed": true
+        },
+        {
+          "name": "SGLT2_ACM full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load SGLT2_HFH",
+          "passed": true
+        },
+        {
+          "name": "SGLT2_HFH analysis",
+          "passed": true
+        },
+        {
+          "name": "SGLT2_HFH full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load PSYCH_INTERVENTION",
+          "passed": true
+        },
+        {
+          "name": "PSYCH_INTERVENTION analysis",
+          "passed": true
+        },
+        {
+          "name": "PSYCH_INTERVENTION full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load BCG",
+          "passed": true
+        },
+        {
+          "name": "BCG analysis",
+          "passed": true
+        },
+        {
+          "name": "BCG full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load ASPIRIN_CVD",
+          "passed": true
+        },
+        {
+          "name": "ASPIRIN_CVD analysis",
+          "passed": true
+        },
+        {
+          "name": "ASPIRIN_CVD full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load BP_REDUCTION",
+          "passed": true
+        },
+        {
+          "name": "BP_REDUCTION analysis",
+          "passed": true
+        },
+        {
+          "name": "BP_REDUCTION full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load MORTALITY_RATE",
+          "passed": true
+        },
+        {
+          "name": "MORTALITY_RATE analysis",
+          "passed": true
+        },
+        {
+          "name": "MORTALITY_RATE full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load BCG_SUBGROUPS",
+          "passed": true
+        },
+        {
+          "name": "BCG_SUBGROUPS analysis",
+          "passed": true
+        },
+        {
+          "name": "BCG_SUBGROUPS full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load SGLT2_HR",
+          "passed": true
+        },
+        {
+          "name": "SGLT2_HR analysis",
+          "passed": true
+        },
+        {
+          "name": "SGLT2_HR full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load MULTI_OUTCOME",
+          "passed": true
+        },
+        {
+          "name": "MULTI_OUTCOME analysis",
+          "passed": true
+        },
+        {
+          "name": "MULTI_OUTCOME full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load BINARY_RR",
+          "passed": true
+        },
+        {
+          "name": "BINARY_RR analysis",
+          "passed": true
+        },
+        {
+          "name": "BINARY_RR full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load BINARY_RD",
+          "passed": true
+        },
+        {
+          "name": "BINARY_RD analysis",
+          "passed": true
+        },
+        {
+          "name": "BINARY_RD full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load CONTINUOUS_SMD",
+          "passed": true
+        },
+        {
+          "name": "CONTINUOUS_SMD analysis",
+          "passed": true
+        },
+        {
+          "name": "CONTINUOUS_SMD full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load GENERIC_EFFECTS",
+          "passed": true
+        },
+        {
+          "name": "GENERIC_EFFECTS analysis",
+          "passed": true
+        },
+        {
+          "name": "GENERIC_EFFECTS full analysis",
+          "passed": true
+        },
+        {
+          "name": "Load METAREG_DOSE",
+          "passed": true
+        },
+        {
+          "name": "METAREG_DOSE analysis",
+          "passed": true
+        },
+        {
+          "name": "METAREG_DOSE full analysis",
+          "passed": true
+        }
+      ]
+    },
+    "Tabs": {
+      "passed": 15,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Tab 'data'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'analysis'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'ddma'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'heterogeneity'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'bias'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'clinical'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'multioutcome'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'demos'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'validation'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'crossdisciplinary'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'code'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'verdict'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'hta'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'advanced'",
+          "passed": true
+        },
+        {
+          "name": "Tab 'report'",
+          "passed": true
+        }
+      ]
+    },
+    "Analysis Buttons": {
+      "passed": 6,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Full Analysis",
+          "passed": true
+        },
+        {
+          "name": "DDMA panel",
+          "passed": true
+        },
+        {
+          "name": "Heterogeneity panel",
+          "passed": true
+        },
+        {
+          "name": "Bias panel",
+          "passed": true
+        },
+        {
+          "name": "Clinical panel",
+          "passed": true
+        },
+        {
+          "name": "HTA panel",
+          "passed": true
+        }
+      ]
+    },
+    "Advanced Panel": {
+      "passed": 9,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "GOSH",
+          "passed": true
+        },
+        {
+          "name": "TSA",
+          "passed": true
+        },
+        {
+          "name": "P-Curve",
+          "passed": true
+        },
+        {
+          "name": "Z-Curve",
+          "passed": true
+        },
+        {
+          "name": "Influence",
+          "passed": true
+        },
+        {
+          "name": "Copas",
+          "passed": true
+        },
+        {
+          "name": "GRADE",
+          "passed": true
+        },
+        {
+          "name": "Small Sample CI",
+          "passed": true
+        },
+        {
+          "name": "Extended Validation",
+          "passed": true
+        }
+      ]
+    },
+    "Plots": {
+      "passed": 2,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Forest plot",
+          "passed": true
+        },
+        {
+          "name": "Funnel plot",
+          "passed": true
+        }
+      ]
+    },
+    "Critical Gap": {
+      "passed": 4,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Mantel-Haenszel OR=0.6409",
+          "passed": true
+        },
+        {
+          "name": "Peto OR=0.6412, I2=92.1%",
+          "passed": true
+        },
+        {
+          "name": "Cook's D max=Study 5, D=0.6302",
+          "passed": true
+        },
+        {
+          "name": "Validation 5/6 passed",
+          "passed": true
+        }
+      ]
+    },
+    "Data Types": {
+      "passed": 5,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "binary (BCG)",
+          "passed": true
+        },
+        {
+          "name": "continuous (BP_REDUCTION)",
+          "passed": true
+        },
+        {
+          "name": "proportion (MORTALITY_RATE)",
+          "passed": true
+        },
+        {
+          "name": "hr (SGLT2_HR)",
+          "passed": true
+        },
+        {
+          "name": "generic (GENERIC_EFFECTS)",
+          "passed": true
+        }
+      ]
+    },
+    "Export": {
+      "passed": 3,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "CSV button exists",
+          "passed": true
+        },
+        {
+          "name": "R export button exists",
+          "passed": true
+        },
+        {
+          "name": "Code tab accessible",
+          "passed": true
+        }
+      ]
+    },
+    "Verdict": {
+      "passed": 2,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Verdict tab",
+          "passed": true
+        },
+        {
+          "name": "Verdict content",
+          "passed": true
+        }
+      ]
+    },
+    "Statistical": {
+      "passed": 3,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Pooled logOR=-0.9872",
+          "passed": true
+        },
+        {
+          "name": "tau2=0.2510",
+          "passed": true
+        },
+        {
+          "name": "I2=84.8%",
+          "passed": true
+        }
+      ]
+    }
+  }
+}

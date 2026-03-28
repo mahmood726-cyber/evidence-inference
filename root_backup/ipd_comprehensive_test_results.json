@@ -1,0 +1,1247 @@
+{
+  "timestamp": "2026-01-11T13:32:28.501019",
+  "summary": {
+    "total": 206,
+    "passed": 108,
+    "failed": 98,
+    "pass_rate": 52.42718446601942
+  },
+  "tests": [
+    {
+      "category": "Setup",
+      "test": "App Load",
+      "passed": true,
+      "details": "Title: IPD Meta-Analysis Pro - Advanced IPD Meta-Analysis Tool"
+    },
+    {
+      "category": "Setup",
+      "test": "Load Test Data",
+      "passed": true,
+      "details": "1098 patients loaded"
+    },
+    {
+      "category": "Setup",
+      "test": "Run Initial Analysis",
+      "passed": false,
+      "details": "Message: \nStacktrace:\nSymbols not available. Dumpi"
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runBayesian",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runMetaRegression",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runNetworkMetaAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runTrimAndFill",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runCumulativeMA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runLeaveOneOutAnalysis",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runSequentialAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runInfluenceDiagnostics",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runDoseResponse",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runMultivariateMA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runNodeSplittingAnalysis",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runCompetingRisks",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runFrailtyModel",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runCureModel",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runJointModel",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runPropensityScoreAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runTMLE",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runAIPW",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runGComputation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runSuperLearner",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runCausalForest",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runPatternMixture",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runSelectionModel",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runRobustVarianceEstimation",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runOneStageAnalysis",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runThreeLevelMA",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runBootstrapInference",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runCrossValidation",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Core",
+      "test": "Function: runPowerCalculation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: runPCurveAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: runExcessSignificanceTest",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: runCopasSelectionModel",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: testSmallStudyEffects",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: harbordTest",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: petersTest",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: testPeters",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: testExcessSignificance",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-PubBias",
+      "test": "Function: analyzePCurve",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawHistogram",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawBubblePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawMetaRegressionPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawInfluencePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawSequentialPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawCumulativePlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawPowerCurve",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawCATEPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawROBSummary",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawRankogram",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawSROC",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawContourFunnelPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawPCurve",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawEValuePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawMediationDiagram",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Plotting",
+      "test": "Function: drawNetworkInteractivity",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportResults",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportPDF",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportHTML",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportRCode",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportStataCode",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportIPDData",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportROB",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportProtocol",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportSensitivityAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: exportPublicationTables",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: downloadReport",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: downloadForest",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: downloadFunnel",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: downloadNetwork",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Export",
+      "test": "Function: downloadCanvas",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showHelp",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showAdvancedFeaturesMenu",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showPowerCalculator",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showResultModal",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showNotification",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: toggleTheme",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showRiskOfBiasAssessment",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showGRADEAssessment",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showDatasetLibrary",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showMediationAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showFederatedAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: showEnhancedExportModal",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: initTooltips",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: closeHelp",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-UI",
+      "test": "Function: clearData",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateI2",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateQ",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculatePooledEffect",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculatePredictionInterval",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateFragilityIndex",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateEValue",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateNNT",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateRMST",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateKaplanMeier",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateCoxPH",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: calculateLogRank",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: estimateTau2",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: estimateREML",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: estimatePM",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: estimateSJ",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: normalCDF",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Stats",
+      "test": "Function: normQuantile",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Functions-Enhancement",
+      "test": "Function: generatePRISMAFlowchart",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Enhancement",
+      "test": "Function: runIntegratedTestSuite",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Enhancement",
+      "test": "Function: showPowerCalculator",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Enhancement",
+      "test": "Function: exportSensitivityAnalysis",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Functions-Enhancement",
+      "test": "Function: showEnhancedExportModal",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: forestPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: funnelPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: networkPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: survivalPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: rankogramPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: cumulativeRankPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: baujatPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: looPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: netHeatPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: tracePlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: posteriorPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: trimFillPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: bubblePlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: sensForestPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: sensImpactPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: uncertaintyCanvas",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: cateForestPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: benefitScoreHist",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: rfImportancePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: rfCATEHist",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: sequentialPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: modelComparisonPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: survivalPlotLarge",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: powerCurve",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: tsaPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: cumulativePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: metaRegPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: multivariateForest",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: curePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: psDistribution",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: qtePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: bmaPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: fpmSurvival",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: fpmHazard",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: bootHist",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: permHist",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: clusterPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: contourFunnel",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: catePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: doseResponsePlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: bivariateScatter",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: copasPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: goshPlot",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas",
+      "test": "Canvas: missingPlot",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Canvas-Render",
+      "test": "Forest Plot Rendered",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Canvas-Render",
+      "test": "Funnel Plot Rendered",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Canvas-Render",
+      "test": "Network Plot Rendered",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Buttons-Main",
+      "test": "Button: Run Analysis",
+      "passed": false,
+      "details": "Not found"
+    },
+    {
+      "category": "Buttons-Main",
+      "test": "Button: Export",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Buttons-Main",
+      "test": "Button: Help",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Buttons-Main",
+      "test": "Button: Clear Data",
+      "passed": false,
+      "details": "Not found"
+    },
+    {
+      "category": "Buttons-Main",
+      "test": "Button: Load Example",
+      "passed": false,
+      "details": "Not found"
+    },
+    {
+      "category": "Buttons-Main",
+      "test": "Button: Run Bayesian",
+      "passed": false,
+      "details": "Not found"
+    },
+    {
+      "category": "Buttons-Main",
+      "test": "Button: Run Meta-Regression",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Buttons-Examples",
+      "test": "Button: Lung Cancer",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Buttons-Examples",
+      "test": "Button: SGLT2",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Buttons-Examples",
+      "test": "Button: Depression",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: data",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: covariates",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: guardian",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: network",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: results",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: ranking",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: heterogeneity",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: consistency",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: bayesian",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: pubBias",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Tabs",
+      "test": "Tab: metareg",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Modals",
+      "test": "Help Modal Opens",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Modals",
+      "test": "Enhanced Export Modal Opens",
+      "passed": false,
+      "details": "Message: no such element: Unab"
+    },
+    {
+      "category": "Modals",
+      "test": "Power Calculator Modal Opens",
+      "passed": false,
+      "details": "Message: no such element: Unab"
+    },
+    {
+      "category": "Modals",
+      "test": "Advanced Features Modal Opens",
+      "passed": false,
+      "details": "Message: no such element: Unab"
+    },
+    {
+      "category": "Modals",
+      "test": "GRADE Assessment Modal",
+      "passed": false,
+      "details": "Message: javascript error: sho"
+    },
+    {
+      "category": "Modals",
+      "test": "Dataset Library Modal Opens",
+      "passed": false,
+      "details": "Message: javascript error: sho"
+    },
+    {
+      "category": "Analysis",
+      "test": "Bayesian Analysis Runs",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Analysis",
+      "test": "Meta-Regression Runs",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Analysis",
+      "test": "P-Curve Analysis Runs",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Analysis",
+      "test": "Excess Significance Test Runs",
+      "passed": null,
+      "details": ""
+    },
+    {
+      "category": "Analysis",
+      "test": "Excess Significance Test Runs",
+      "passed": false,
+      "details": "Message: javascript error: Can"
+    },
+    {
+      "category": "Analysis",
+      "test": "Integrated Test Suite Runs",
+      "passed": null,
+      "details": ""
+    },
+    {
+      "category": "Statistics",
+      "test": "Pooled Effect Calculated",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Statistics",
+      "test": "Confidence Interval",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Statistics",
+      "test": "I-squared Calculated",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Statistics",
+      "test": "Tau-squared Calculated",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Statistics",
+      "test": "Q Statistic Calculated",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "MathUtils",
+      "test": "MathUtils.normCDF(0) = 0.5",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "MathUtils",
+      "test": "MathUtils.normCDF(1.96) = 0.975",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "MathUtils",
+      "test": "MathUtils.normQuantile(0.975) = 1.96",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "MathUtils",
+      "test": "MathUtils.chi2CDF exists",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "MathUtils",
+      "test": "MathUtils.tCDF exists",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Tooltips",
+      "test": "TOOLTIPS Object Exists",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "category": "Tooltips",
+      "test": "TOOLTIPS Has Entries",
+      "passed": false,
+      "details": "22 tooltips"
+    },
+    {
+      "category": "Tooltips",
+      "test": "Tooltip Elements Present",
+      "passed": true,
+      "details": "70 elements"
+    },
+    {
+      "category": "Network",
+      "test": "Network Statistics Displayed",
+      "passed": false,
+      "details": ""
+    },
+    {
+      "category": "Network",
+      "test": "Network Plot Canvas Exists",
+      "passed": true,
+      "details": ""
+    }
+  ]
+}

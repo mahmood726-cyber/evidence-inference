@@ -1,0 +1,361 @@
+{
+  "datasets": {
+    "SGLT2_CV_DEATH_HFPEF": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 2,
+      "load_time": 1.6106963157653809,
+      "analysis_time": 2.1562657356262207,
+      "full_analysis_time": 3.070441961288452
+    },
+    "SGLT2_ACM": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 5,
+      "load_time": 1.6545169353485107,
+      "analysis_time": 2.1607472896575928,
+      "full_analysis_time": 3.026272773742676
+    },
+    "SGLT2_HFH": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 4,
+      "load_time": 1.6912052631378174,
+      "analysis_time": 2.0878260135650635,
+      "full_analysis_time": 3.0185790061950684
+    },
+    "PSYCH_INTERVENTION": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 4,
+      "load_time": 1.5228650569915771,
+      "analysis_time": 2.0225534439086914,
+      "full_analysis_time": 3.0132336616516113
+    },
+    "BCG": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 6,
+      "load_time": 1.5279526710510254,
+      "analysis_time": 2.0233383178710938,
+      "full_analysis_time": 3.012911319732666
+    },
+    "ASPIRIN_CVD": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 5,
+      "load_time": 1.5240516662597656,
+      "analysis_time": 2.0360865592956543,
+      "full_analysis_time": 3.020077705383301
+    },
+    "BP_REDUCTION": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 5,
+      "load_time": 1.5272657871246338,
+      "analysis_time": 2.025282382965088,
+      "full_analysis_time": 3.014352321624756
+    },
+    "MORTALITY_RATE": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 6,
+      "load_time": 1.536376953125,
+      "analysis_time": 2.024627208709717,
+      "full_analysis_time": 3.013801336288452
+    },
+    "BCG_SUBGROUPS": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 6,
+      "load_time": 1.5376744270324707,
+      "analysis_time": 2.0244009494781494,
+      "full_analysis_time": 3.0128014087677
+    },
+    "SGLT2_HR": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 5,
+      "load_time": 1.5387556552886963,
+      "analysis_time": 2.060373067855835,
+      "full_analysis_time": 3.0146405696868896
+    },
+    "MULTI_OUTCOME": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 12,
+      "load_time": 1.5259742736816406,
+      "analysis_time": 2.020425319671631,
+      "full_analysis_time": 3.0133180618286133
+    },
+    "BINARY_RR": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 6,
+      "load_time": 1.5394225120544434,
+      "analysis_time": 2.0244882106781006,
+      "full_analysis_time": 3.0261473655700684
+    },
+    "BINARY_RD": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 8,
+      "load_time": 1.6244008541107178,
+      "analysis_time": 2.134204626083374,
+      "full_analysis_time": 3.0711965560913086
+    },
+    "CONTINUOUS_SMD": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 10,
+      "load_time": 1.6706056594848633,
+      "analysis_time": 2.1244492530822754,
+      "full_analysis_time": 3.0538697242736816
+    },
+    "GENERIC_EFFECTS": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 10,
+      "load_time": 1.6985957622528076,
+      "analysis_time": 2.1185712814331055,
+      "full_analysis_time": 3.0290791988372803
+    },
+    "METAREG_DOSE": {
+      "load": true,
+      "analysis": true,
+      "full_analysis": true,
+      "study_count": 10,
+      "load_time": 1.571007490158081,
+      "analysis_time": 2.0577023029327393,
+      "full_analysis_time": 3.067103385925293
+    }
+  },
+  "tabs": {
+    "data": null,
+    "analysis": null,
+    "ddma": null,
+    "heterogeneity": null,
+    "bias": null,
+    "clinical": null,
+    "multioutcome": null,
+    "demos": null,
+    "validation": null,
+    "crossdisciplinary": null,
+    "code": null,
+    "verdict": null,
+    "hta": null,
+    "advanced": null,
+    "report": null
+  },
+  "buttons": {
+    "runAnalysisBtn": {
+      "success": true,
+      "details": {
+        "visible": true,
+        "enabled": true
+      }
+    },
+    "fullAnalysisBtn": {
+      "success": false,
+      "details": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[id=\"fullAnalysisBtn\"]\"}\n  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nStacktrace:\nSymbols not available. Dumping unresolved backtrace:\n\t0x7ff60c1c88d5\n\t0x7ff60c1c8930\n\t0x7ff60bfa165d\n\t0x7ff60bff9a33\n\t0x7ff60bff9d3c\n\t0x7ff60c04df67\n\t0x7ff60c04ac97\n\t0x7ff60bfeac29\n\t0x7ff60bfeba93\n\t0x7ff60c4e0620\n\t0x7ff60c4daf60\n\t0x7ff60c4f96c6\n\t0x7ff60c1e5dd4\n\t0x7ff60c1eed7c\n\t0x7ff60c1d1ff4\n\t0x7ff60c1d21a5\n\t0x7ff60c1b7ed2\n\t0x7ffb659be8d7\n\t0x7ffb676ec53c\n"
+    },
+    "exportCSVBtn": {
+      "success": false,
+      "details": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[id=\"exportCSVBtn\"]\"}\n  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nStacktrace:\nSymbols not available. Dumping unresolved backtrace:\n\t0x7ff60c1c88d5\n\t0x7ff60c1c8930\n\t0x7ff60bfa165d\n\t0x7ff60bff9a33\n\t0x7ff60bff9d3c\n\t0x7ff60c04df67\n\t0x7ff60c04ac97\n\t0x7ff60bfeac29\n\t0x7ff60bfeba93\n\t0x7ff60c4e0620\n\t0x7ff60c4daf60\n\t0x7ff60c4f96c6\n\t0x7ff60c1e5dd4\n\t0x7ff60c1eed7c\n\t0x7ff60c1d1ff4\n\t0x7ff60c1d21a5\n\t0x7ff60c1b7ed2\n\t0x7ffb659be8d7\n\t0x7ffb676ec53c\n"
+    },
+    "exportRCodeBtn": {
+      "success": false,
+      "details": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[id=\"exportRCodeBtn\"]\"}\n  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nStacktrace:\nSymbols not available. Dumping unresolved backtrace:\n\t0x7ff60c1c88d5\n\t0x7ff60c1c8930\n\t0x7ff60bfa165d\n\t0x7ff60bff9a33\n\t0x7ff60bff9d3c\n\t0x7ff60c04df67\n\t0x7ff60c04ac97\n\t0x7ff60bfeac29\n\t0x7ff60bfeba93\n\t0x7ff60c4e0620\n\t0x7ff60c4daf60\n\t0x7ff60c4f96c6\n\t0x7ff60c1e5dd4\n\t0x7ff60c1eed7c\n\t0x7ff60c1d1ff4\n\t0x7ff60c1d21a5\n\t0x7ff60c1b7ed2\n\t0x7ffb659be8d7\n\t0x7ffb676ec53c\n"
+    },
+    "runGOSH": false,
+    "runTSA": false,
+    "runPCurve": false,
+    "runZCurve": false,
+    "runInfluence": false,
+    "runCopas": false,
+    "runGRADE": false,
+    "runSmallSampleCI": false,
+    "runExtendedValidation": false,
+    "runHTA": false,
+    "generateVerdict": false
+  },
+  "plots": {
+    "forestPlot": {
+      "success": true,
+      "details": {
+        "contentLength": 26176,
+        "exists": true,
+        "hasCanvas": false,
+        "hasContent": true,
+        "hasSVG": true
+      }
+    },
+    "funnelPlot": {
+      "success": true,
+      "details": {
+        "contentLength": 21899,
+        "exists": true,
+        "hasCanvas": false,
+        "hasContent": true,
+        "hasSVG": true
+      }
+    },
+    "galbraithPlot": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    },
+    "labbePlot": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    },
+    "baujatPlot": {
+      "success": true,
+      "details": {
+        "contentLength": 11020,
+        "exists": true,
+        "hasCanvas": false,
+        "hasContent": true,
+        "hasSVG": true
+      }
+    },
+    "influencePlot": {
+      "success": false,
+      "details": {
+        "contentLength": 0,
+        "exists": true,
+        "hasCanvas": false,
+        "hasContent": false,
+        "hasSVG": false
+      }
+    },
+    "cumulativePlot": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    },
+    "qqPlot": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    },
+    "goshPlot": {
+      "success": false,
+      "details": {
+        "contentLength": 0,
+        "exists": true,
+        "hasCanvas": false,
+        "hasContent": false,
+        "hasSVG": false
+      }
+    },
+    "tsaPlot": {
+      "success": false,
+      "details": {
+        "contentLength": 0,
+        "exists": true,
+        "hasCanvas": false,
+        "hasContent": false,
+        "hasSVG": false
+      }
+    },
+    "pcurvePlot": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    },
+    "zcurvePlot": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    },
+    "contourFunnel": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    },
+    "trimFillPlot": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    },
+    "sunsetPlot": {
+      "success": false,
+      "details": {
+        "contentLength": 0,
+        "exists": true,
+        "hasCanvas": false,
+        "hasContent": false,
+        "hasSVG": false
+      }
+    },
+    "draperyPlot": {
+      "success": null,
+      "details": {
+        "exists": false,
+        "reason": "Container not found"
+      }
+    }
+  },
+  "functions": {
+    "mantelHaenszel": true,
+    "petoMethod": true,
+    "cookDistance": true,
+    "eggerTest": true,
+    "beggTest": true,
+    "trimAndFill": true,
+    "petPeese": true,
+    "metaRegression": true,
+    "subgroupAnalysis": true,
+    "leaveOneOut": true,
+    "cumulativeMetaAnalysis": true,
+    "bayesianMetaAnalysis": true,
+    "fragilityIndex": true,
+    "glmmMetaAnalysis": true,
+    "networkMAConsistency": true,
+    "profileLikelihood": true,
+    "robmaModelAveraging": true,
+    "multiverseMetaAnalysis": true,
+    "sequentialMetaAnalysis": true,
+    "pUniformStar": true
+  },
+  "performance": {
+    "app_load": 4.220322132110596,
+    "avg_load_time": 1.5813354551792145,
+    "avg_analysis_time": 2.0688338726758957,
+    "avg_full_analysis_time": 3.0298641473054886
+  },
+  "errors": []
+}
