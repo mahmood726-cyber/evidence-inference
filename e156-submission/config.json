@@ -1,0 +1,57 @@
+{
+  "title": "Evidence Inference: Machine Learning Extraction of Treatment Effects from Clinical Trial Reports",
+  "slug": "evidence-inference-ml-extraction",
+  "author": "Mahmood Ahmad",
+  "date": "2026-03-26",
+  "path": "C:\\Projects\\evidence-inference",
+  "type": "methods",
+  "primary_estimand": "Classification accuracy",
+  "summary": "A machine learning framework for inferring whether interventions significantly increased, decreased, or had no effect on outcomes from clinical trial articles.",
+  "body": "Can machine learning models reliably infer comparative treatment effects from clinical trial reports to accelerate systematic review data extraction workflows? The Evidence Inference dataset contains annotated biomedical articles describing randomized trials with prompts asking whether an intervention significantly increased, decreased, or had no effect on an outcome relative to a comparator. Models train on prompt-article pairs with human-annotated labels and supporting evidence spans using full-text and abstract-only versions for prototyping and evaluation. The expanded 2.0 dataset increased annotations by 25 percent over the original NAACL 2019 release providing stronger baselines and error analysis across intervention-comparator-outcome triplets. Error inspection revealed that ambiguous reporting language and multi-arm trial structures accounted for most disagreements between model predictions and expert annotations. Automated evidence extraction can meaningfully reduce the manual burden of systematic review data collection when paired with human verification. The limitation of prompt-based extraction is that the framework assumes pre-identified intervention-comparator-outcome triplets rather than discovering them from unstructured text.",
+  "sentences": [
+    {
+      "role": "Question",
+      "text": "Can machine learning models reliably infer comparative treatment effects from clinical trial reports to accelerate systematic review data extraction workflows?"
+    },
+    {
+      "role": "Dataset",
+      "text": "The Evidence Inference dataset contains annotated biomedical articles describing randomized trials with prompts asking whether an intervention significantly increased, decreased, or had no effect on an outcome relative to a comparator."
+    },
+    {
+      "role": "Method",
+      "text": "Models train on prompt-article pairs with human-annotated labels and supporting evidence spans using full-text and abstract-only versions for prototyping and evaluation."
+    },
+    {
+      "role": "Primary result",
+      "text": "The expanded 2.0 dataset increased annotations by 25 percent over the original NAACL 2019 release providing stronger baselines and error analysis across intervention-comparator-outcome triplets."
+    },
+    {
+      "role": "Robustness",
+      "text": "Error inspection revealed that ambiguous reporting language and multi-arm trial structures accounted for most disagreements between model predictions and expert annotations."
+    },
+    {
+      "role": "Interpretation",
+      "text": "Automated evidence extraction can meaningfully reduce the manual burden of systematic review data collection when paired with human verification."
+    },
+    {
+      "role": "Boundary",
+      "text": "The limitation of prompt-based extraction is that the framework assumes pre-identified intervention-comparator-outcome triplets rather than discovering them from unstructured text."
+    }
+  ],
+  "notes": {
+    "app": "Evidence Inference v2.0",
+    "data": "Annotated RCT articles from BioNLP, NAACL 2019 + 2020 expansion",
+    "code": "https://github.com/jayded/evidence-inference",
+    "doi": "",
+    "version": "2.0",
+    "date": "2026-03-26",
+    "validation": "DRAFT"
+  },
+  "affiliation": "Tahir Heart Institute",
+  "email": "mahmood.ahmad2@nhs.net",
+  "references": [
+    "Marshall IJ, Noel-Storr A, Kuber J, et al. Machine learning for identifying randomized controlled trials: an evaluation and practitioner's guide. Res Synth Methods. 2018;9(4):602-614.",
+    "Jonnalagadda SR, Goyal P, Huffman MD. Automating data extraction in systematic reviews: a systematic review. Syst Rev. 2015;4:78.",
+    "Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to Meta-Analysis. 2nd ed. Wiley; 2021."
+  ]
+}
