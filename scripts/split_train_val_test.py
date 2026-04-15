@@ -5,13 +5,22 @@ Created on Wed Oct 24 12:15:51 2018
 @author: Eric
 """
 import glob
+import os
 import random
+from pathlib import Path
+
 import numpy as np
 
 
-# the locations of the files
-loc = '/home/ubuntu/evidence-inference/annotations/'
-#loc = '..//.//annotations//'
+# the locations of the files. Override with EVIDENCE_INFERENCE_ANNOTATIONS env var
+# (lessons.md "No hardcoded local paths in deployable code"). Default falls back to
+# the repo-relative annotations/ directory which is the version-controlled layout
+# distributed with this repository.
+_repo_root = Path(__file__).resolve().parent.parent
+_default_loc = _repo_root / 'annotations'
+loc = os.environ.get('EVIDENCE_INFERENCE_ANNOTATIONS', str(_default_loc))
+if not loc.endswith(('/', os.sep)):
+    loc = loc + os.sep
 loc_files = loc + 'xml_files/*.nxml'
 loc_train = loc + 'splits/' + 'train_article_ids.txt'
 loc_val   = loc + 'splits/' + 'validation_article_ids.txt'
