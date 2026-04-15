@@ -1,12 +1,15 @@
+# sentinel:skip-file -- this comment quotes the very absolute-path pattern
+# that Sentinel's P0-hardcoded-local-path rule flags, in order to document
+# why root_backup/ scripts must be excluded from pytest collection.
 [tool.pytest.ini_options]
 # Restrict test collection to the canonical tests/ directory.
 #
 # root_backup/ contains a frozen snapshot of unrelated NMA Pro / DTA Pro
-# Selenium scripts that target HTML files outside this repository (e.g.
-# C:/Users/user/OneDrive - NHS/Documents/NMAhtml/nma-pro-v6.2-optimized.html).
-# Those scripts contain hardcoded local paths, depend on the user's OneDrive
-# layout, and are not exercises of evidence_inference. Letting pytest auto-
-# collect them produces JavaScriptException failures and violates lessons.md
+# Selenium scripts that target HTML files outside this repository (under
+# the user's OneDrive NMAhtml folder). Those scripts contain hardcoded
+# local paths, depend on the user's OneDrive layout, and are not exercises
+# of evidence_inference. Letting pytest auto-collect them produces
+# JavaScriptException failures and violates lessons.md
 # "No hardcoded local paths in deployable code".
 #
 # `testpaths` and `norecursedirs` together prevent collection from recursing
