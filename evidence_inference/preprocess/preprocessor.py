@@ -295,6 +295,11 @@ class SimpleInferenceVectorizer:
 
         prompt = prompts_df[prompts_df[PROMPT_ID_COL_NAME]==prompt_id]
 
+        if prompt.empty:
+            raise KeyError(
+                "No prompt found for {}={!r} in the supplied prompts_df".format(
+                    PROMPT_ID_COL_NAME, prompt_id))
+
         ###
         # vectorize the article itself.
         article_id = str(prompt[STUDY_ID_COL].values[0])

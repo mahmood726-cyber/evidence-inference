@@ -443,7 +443,7 @@ class InferenceNet(ConfiguredInferenceNet):
             init_embedding_weights.requires_grad = False
 
         vocab_size = len(vectorizer.idx_to_str)
-        ico_h_size = None if ICO_encoder is 'CBoW' else h_size
+        ico_h_size = None if ICO_encoder == 'CBoW' else h_size
         i_size, i_encoder = encoder_constructor(ICO_encoder, vocab_size, init_embedding_weights, h_size=ico_h_size)
         c_size, c_encoder = encoder_constructor(ICO_encoder, vocab_size, init_embedding_weights, h_size=ico_h_size)
         o_size, o_encoder = encoder_constructor(ICO_encoder, vocab_size, init_embedding_weights, h_size=ico_h_size)
